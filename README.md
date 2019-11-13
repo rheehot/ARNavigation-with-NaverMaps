@@ -13,3 +13,6 @@
 ### 개발 언어 
 - iOS : Swift
 - Android: Kotlin
+
+### 개발 환경
+- 최소 지원 버전 : iOS 11
