@@ -8,16 +8,12 @@
 
 import UIKit
 import NMapsMap
-import CoreLocation
 
 class MainViewController: UIViewController {
     // MARK:- IBOutlet
-    @IBOutlet weak var naverMapView: NMFNaverMapView! {
-        didSet {
-            self.naverMapView.positionMode = .direction
-            self.naverMapView.mapView.zoomLevel = 15
-        }
-    }
+    @IBOutlet weak var naverMapView: NMFNaverMapView!
+    @IBOutlet weak var latLabel: UILabel!
+    @IBOutlet weak var lngLabel: UILabel!
     
     // MARK:- Properties
     private var authState: NMFAuthState!
@@ -34,15 +30,11 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NMFLocationManager.sharedInstance()?.add(self)
         naverMapView.delegate = self
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
-        locationManager.requestWhenInUseAuthorization()
         
-        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways) {
-            locationManager.requestLocation()
-        }
-        
+        self.naverMapView.positionMode = .direction
+        self.naverMapView.mapView.zoomLevel = 15
     }
     
     @IBAction func tappedNaviButton(_ sender: UIButton) {
@@ -58,11 +50,10 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func tappedARNaviButton(_ sender: UIButton) {
-//        let arVC = ARViewController()
-//        guard let path = drivingPath else { return }
-//        arVC.getDrivePath(path)
-//        
-//        self.present(arVC, animated: true)
+//         let arVC = ARViewController()
+//         guard let path = drivingPath else { return }
+//         arVC.getDrivePath(path)
+//         self.present(arVC, animated: true)
     }
     
     func requestNavigationData(completion: @escaping (Bool) -> Void) {
@@ -136,29 +127,12 @@ extension MainViewController: NMFMapViewDelegate {
     }
 }
 
-extension MainViewController: CLLocationManagerDelegate {
-    // error 가 발생시 호출되는 CallBack 함수
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("error: \(error.localizedDescription)")
-    }
+extension MainViewController: NMFLocationManagerDelegate {
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse || status == .authorizedAlways {
-            locationManager.requestLocation()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let _ = locations.first, !locationRequestCompletion {
-            locationRequestCompletion = true
-            getCurrentLocation(locations.first!) { (isSuccess, data) in
-                if isSuccess, let currentLocation = data {
-                    self.currentLocationData = currentLocation
-                    print("성공: \(currentLocation)")
-                } else {
-                    print("현재 위치 데이터 요청 실패")
-                }
-            }
-        }
+    func locationManager(_ locationManager: NMFLocationManager!, didUpdateLocations locations: [Any]!) {
+        guard let curLocation = locations.last as? CLLocation else { return }
+        self.latLabel.text = "경도 : \(curLocation.coordinate.latitude)"
+        self.lngLabel.text = "위도 : \(curLocation.coordinate.longitude)"
+        
     }
 }
