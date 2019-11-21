@@ -22,27 +22,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtG-ul-vD2" customClass="NMFMapView">
-                                <rect key="frame" x="0.0" y="20" width="414" height="670"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtG-ul-vD2" customClass="NMFNaverMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-lR-2Yy">
-                                <rect key="frame" x="319" y="135" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-eO-FYw">
+                                <rect key="frame" x="355" y="700" width="39" height="30"/>
+                                <state key="normal" title="길찾기"/>
+                                <connections>
+                                    <action selector="tappedNaviButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9b0-kg-S0a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-lR-2Yy">
+                                <rect key="frame" x="331" y="738" width="63" height="30"/>
                                 <state key="normal" title="AR 길안내"/>
                                 <connections>
-                                    <segue destination="x5W-lQ-HOu" kind="show" id="BEb-L7-WAZ"/>
+                                    <action selector="tappedARNaviButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCA-J5-xow"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="CtG-ul-vD2" secondAttribute="bottom" constant="206" id="1af-JP-WTD"/>
-                            <constraint firstItem="CtG-ul-vD2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="3DY-Fz-GHV"/>
+                            <constraint firstItem="CtG-ul-vD2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3DY-Fz-GHV"/>
                             <constraint firstItem="CtG-ul-vD2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4l7-4g-2eZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iEl-lR-2Yy" secondAttribute="trailing" constant="20" id="5MM-uX-gyD"/>
                             <constraint firstItem="Ep4-8x-QsJ" firstAttribute="top" secondItem="CtG-ul-vD2" secondAttribute="bottom" constant="17" id="FJs-YU-mPL"/>
+                            <constraint firstItem="iEl-lR-2Yy" firstAttribute="top" secondItem="AU2-eO-FYw" secondAttribute="bottom" constant="8" id="Js1-pI-w3C"/>
                             <constraint firstItem="CtG-ul-vD2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jvd-MH-0CJ"/>
+                            <constraint firstItem="AU2-eO-FYw" firstAttribute="top" secondItem="CtG-ul-vD2" secondAttribute="bottom" constant="10" id="XRc-XT-MEY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AU2-eO-FYw" secondAttribute="trailing" constant="20" id="fe4-AZ-dsS"/>
                             <constraint firstItem="CtG-ul-vD2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mdv-R4-Ul0"/>
                             <constraint firstItem="CtG-ul-vD2" firstAttribute="centerX" secondItem="Ep4-8x-QsJ" secondAttribute="centerX" id="sWL-Dw-PZL"/>
                         </constraints>
@@ -59,9 +69,9 @@
         <!--View Controller-->
         <scene sceneID="wh2-xM-lil">
             <objects>
-                <viewController id="x5W-lQ-HOu" customClass="ARViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARViewController" id="x5W-lQ-HOu" customClass="ARViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xkM-QD-rYf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="k1b-eZ-5dT"/>

@@ -9,10 +9,10 @@
 import Foundation
 
 struct Trafast: Codable {
-    let path: [[Double?]]?
+    let path: [[Double]]?
 }
 
-// 시작과 도착의 경로 
+// 시작과 도착의 경로
 struct Route: Codable {
     let trafast: [Trafast]?         // 실시간 빠른길
 }
@@ -21,3 +21,4 @@ struct Driving: Codable {
     let message: String?
     let route: Route?
 }
+

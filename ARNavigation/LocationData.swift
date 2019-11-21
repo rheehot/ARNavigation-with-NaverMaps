@@ -9,6 +9,7 @@
 import Foundation
 
 struct LocationData {
+    var locationName: String?           // 위치 이름
     var latitude: Double?               // 위도
     var longitude: Double?              // 경도
 }
@@ -16,5 +17,15 @@ struct LocationData {
 struct LocationInfo {
     var startLocation: LocationData?    // 시작지점
     var goalLocation: LocationData?     // 도착지점
+    
+    var start: String {
+        return "\(self.startLocation?.longitude ?? 0),\(self.startLocation?.latitude ?? 0)"
+    }
+    
+    var goal: String {
+        return "\(self.goalLocation?.longitude ?? 0),\(self.goalLocation?.latitude ?? 0)"
+    }
 }
+
+
 
