@@ -58,11 +58,11 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func tappedARNaviButton(_ sender: UIButton) {
-        let arVC = ARViewController()
-        guard let path = drivingPath else { return }
-        arVC.getDrivePath(path)
-        
-        self.present(arVC, animated: true)
+//        let arVC = ARViewController()
+//        guard let path = drivingPath else { return }
+//        arVC.getDrivePath(path)
+//        
+//        self.present(arVC, animated: true)
     }
     
     func requestNavigationData(completion: @escaping (Bool) -> Void) {

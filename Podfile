@@ -16,5 +16,4 @@ target 'ARNavigation' do
     # Pods for testing
   end
 pod 'NMapsMap'
-pod 'ARCL'
 end

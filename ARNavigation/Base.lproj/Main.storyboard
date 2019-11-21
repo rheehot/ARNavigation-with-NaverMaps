@@ -39,6 +39,7 @@
                                 <state key="normal" title="AR 길안내"/>
                                 <connections>
                                     <action selector="tappedARNaviButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCA-J5-xow"/>
+                                    <segue destination="5wj-fi-5Wd" kind="show" id="zVM-UO-eKw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,20 +68,34 @@
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="wh2-xM-lil">
+        <scene sceneID="2av-e8-sOa">
             <objects>
-                <viewController storyboardIdentifier="ARViewController" id="x5W-lQ-HOu" customClass="ARViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xkM-QD-rYf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="5wj-fi-5Wd" customClass="ARViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uwk-Hh-lDv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwC-kn-ukd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </arscnView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="k1b-eZ-5dT"/>
+                        <constraints>
+                            <constraint firstItem="rwC-kn-ukd" firstAttribute="top" secondItem="UA3-3g-QKh" secondAttribute="top" id="hDi-rZ-9Od"/>
+                            <constraint firstItem="UA3-3g-QKh" firstAttribute="trailing" secondItem="rwC-kn-ukd" secondAttribute="trailing" id="qIY-ix-jVF"/>
+                            <constraint firstItem="UA3-3g-QKh" firstAttribute="bottom" secondItem="rwC-kn-ukd" secondAttribute="bottom" id="xEw-OA-MQL"/>
+                            <constraint firstItem="rwC-kn-ukd" firstAttribute="leading" secondItem="UA3-3g-QKh" secondAttribute="leading" id="zEa-hG-wqt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UA3-3g-QKh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JjD-9P-OxC"/>
+                    <navigationItem key="navigationItem" id="1XV-OP-h8Z"/>
+                    <connections>
+                        <outlet property="arSceneView" destination="rwC-kn-ukd" id="frs-Ee-7js"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5G-b5-CV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbD-lc-3FK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="116"/>
+            <point key="canvasLocation" x="822" y="116"/>
         </scene>
     </scenes>
 </document>
