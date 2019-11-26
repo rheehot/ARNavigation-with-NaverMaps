@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73D92B07CAA7F3CEC42BFA72 /* Pods_ARNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D5154EB8B0CA7AB44FC56C /* Pods_ARNavigation.framework */; };
-<<<<<<< HEAD
-		AB56BCD8DD7E4D95AAE422E1 /* Pods_ARNavigation_ARNavigationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753EC2CC28F58687F57BBC34 /* Pods_ARNavigation_ARNavigationUITests.framework */; };
-=======
 		C6C3EDC279A0F8FC45D54FD2 /* Pods_ARNavigation_ARNavigationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C81192D62BAB0BFD267BA1C /* Pods_ARNavigation_ARNavigationUITests.framework */; };
->>>>>>> 5af08fcf2f56704767600e24a6508e2fef475e56
 		DF8D8189B0845855A45DAA0B /* Pods_ARNavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AF9354C93F718C18E2809D /* Pods_ARNavigationTests.framework */; };
 		EF072645237C12AC00384D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072644237C12AC00384D3E /* AppDelegate.swift */; };
 		EF072649237C12AC00384D3E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072648237C12AC00384D3E /* MainViewController.swift */; };
@@ -22,7 +18,7 @@
 		EF07265C237C12AF00384D3E /* ARNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07265B237C12AF00384D3E /* ARNavigationTests.swift */; };
 		EF072667237C12AF00384D3E /* ARNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072666237C12AF00384D3E /* ARNavigationUITests.swift */; };
 		EF072675237C162B00384D3E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072674237C162B00384D3E /* ARViewController.swift */; };
-		EF40023B2383C2E300A8DF0C /* ExtensionCoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF40023A2383C2E300A8DF0C /* ExtensionCoreLocation.swift */; };
+		EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */; };
 		EFB0FDE9237EA595005EEDE2 /* Driving.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDE8237EA595005EEDE2 /* Driving.swift */; };
 		EFB0FDED237EA672005EEDE2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDEC237EA672005EEDE2 /* Request.swift */; };
 		EFB0FDEF237EA67D005EEDE2 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDEE237EA67D005EEDE2 /* RequestProtocol.swift */; };
@@ -53,18 +49,12 @@
 		57AF9354C93F718C18E2809D /* Pods_ARNavigationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARNavigationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D5154EB8B0CA7AB44FC56C /* Pods_ARNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E111BDC3D3CB8A79B284B99 /* Pods-ARNavigationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigationTests.debug.xcconfig"; path = "Target Support Files/Pods-ARNavigationTests/Pods-ARNavigationTests.debug.xcconfig"; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		65ACC621E0BA5DE6975C56E1 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigation-ARNavigationUITests.release.xcconfig"; path = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests.release.xcconfig"; sourceTree = "<group>"; };
-		753EC2CC28F58687F57BBC34 /* Pods_ARNavigation_ARNavigationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARNavigation_ARNavigationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
 		96188B96ED193E1FA42AA675 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigation-ARNavigationUITests.release.xcconfig"; path = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests.release.xcconfig"; sourceTree = "<group>"; };
->>>>>>> 5af08fcf2f56704767600e24a6508e2fef475e56
 		A47FBAB9D953F63839A0C6F9 /* Pods-ARNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigation.release.xcconfig"; path = "Target Support Files/Pods-ARNavigation/Pods-ARNavigation.release.xcconfig"; sourceTree = "<group>"; };
 		B1E95097FBB35D88E09A1E79 /* Pods-ARNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigation.debug.xcconfig"; path = "Target Support Files/Pods-ARNavigation/Pods-ARNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 		BC8F35AF3A9018BB89398210 /* Pods-ARNavigationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigationUITests.debug.xcconfig"; path = "Target Support Files/Pods-ARNavigationUITests/Pods-ARNavigationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3AB51CA7952477BAD30085C /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigation-ARNavigationUITests.debug.xcconfig"; path = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C621A669EEFD6606E9467466 /* Pods-ARNavigationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigationUITests.release.xcconfig"; path = "Target Support Files/Pods-ARNavigationUITests/Pods-ARNavigationUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EE51E8262D9FC876FEF2C513 /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigation-ARNavigationUITests.debug.xcconfig"; path = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF072641237C12AC00384D3E /* ARNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF072644237C12AC00384D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF072648237C12AC00384D3E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ARNavigation/Controller/MainViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -79,12 +69,12 @@
 		EF072666237C12AF00384D3E /* ARNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNavigationUITests.swift; sourceTree = "<group>"; };
 		EF072668237C12AF00384D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF072674237C162B00384D3E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = ARNavigation/Controller/ARViewController.swift; sourceTree = SOURCE_ROOT; };
-		EF40023A2383C2E300A8DF0C /* ExtensionCoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCoreLocation.swift; sourceTree = SOURCE_ROOT; };
+		EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreLocation+Extension.swift"; path = "ARNavigation/Extension/CoreLocation+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		EFB0FDE8237EA595005EEDE2 /* Driving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Driving.swift; path = ARNavigation/Model/Navigation/Driving.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDEC237EA672005EEDE2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Request.swift; path = ARNavigation/Model/Request.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDEC237EA672005EEDE2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Request.swift; path = ARNavigation/Model/Request/Request.swift; sourceTree = SOURCE_ROOT; };
 		EFB0FDEE237EA67D005EEDE2 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
-		EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationData.swift; path = ARNavigation/LocationData.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDF3237EA7F2005EEDE2 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestError.swift; path = ARNavigation/Model/RequestError.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationData.swift; path = ARNavigation/Model/Location/LocationData.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDF3237EA7F2005EEDE2 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestError.swift; path = ARNavigation/Model/Request/RequestError.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				AB56BCD8DD7E4D95AAE422E1 /* Pods_ARNavigation_ARNavigationUITests.framework in Frameworks */,
-=======
 				C6C3EDC279A0F8FC45D54FD2 /* Pods_ARNavigation_ARNavigationUITests.framework in Frameworks */,
->>>>>>> 5af08fcf2f56704767600e24a6508e2fef475e56
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,11 +110,7 @@
 			children = (
 				57D5154EB8B0CA7AB44FC56C /* Pods_ARNavigation.framework */,
 				57AF9354C93F718C18E2809D /* Pods_ARNavigationTests.framework */,
-<<<<<<< HEAD
-				753EC2CC28F58687F57BBC34 /* Pods_ARNavigation_ARNavigationUITests.framework */,
-=======
 				4C81192D62BAB0BFD267BA1C /* Pods_ARNavigation_ARNavigationUITests.framework */,
->>>>>>> 5af08fcf2f56704767600e24a6508e2fef475e56
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,7 +218,7 @@
 		EFB0FDFC2382CBCB005EEDE2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				EF40023A2383C2E300A8DF0C /* ExtensionCoreLocation.swift */,
+				EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -250,13 +232,8 @@
 				1A1B9A1667CCDFC2BCBB6892 /* Pods-ARNavigationTests.release.xcconfig */,
 				BC8F35AF3A9018BB89398210 /* Pods-ARNavigationUITests.debug.xcconfig */,
 				C621A669EEFD6606E9467466 /* Pods-ARNavigationUITests.release.xcconfig */,
-<<<<<<< HEAD
-				EE51E8262D9FC876FEF2C513 /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */,
-				65ACC621E0BA5DE6975C56E1 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */,
-=======
 				C3AB51CA7952477BAD30085C /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */,
 				96188B96ED193E1FA42AA675 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */,
->>>>>>> 5af08fcf2f56704767600e24a6508e2fef475e56
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -272,6 +249,7 @@
 				EF07263D237C12AC00384D3E /* Sources */,
 				EF07263E237C12AC00384D3E /* Frameworks */,
 				EF07263F237C12AC00384D3E /* Resources */,
+				5FB1862B1B4E85E73342B5B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,6 +392,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5FB1862B1B4E85E73342B5B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARNavigation/Pods-ARNavigation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARNavigation/Pods-ARNavigation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARNavigation/Pods-ARNavigation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6D075EE186333A61DFF85325 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,7 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF40023B2383C2E300A8DF0C /* ExtensionCoreLocation.swift in Sources */,
+				EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */,
 				EFB0FDF4237EA7F2005EEDE2 /* RequestError.swift in Sources */,
 				EF072675237C162B00384D3E /* ARViewController.swift in Sources */,
 				EF072649237C12AC00384D3E /* MainViewController.swift in Sources */,
@@ -747,11 +742,7 @@
 		};
 		EF072672237C12AF00384D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-			baseConfigurationReference = EE51E8262D9FC876FEF2C513 /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */;
-=======
 			baseConfigurationReference = C3AB51CA7952477BAD30085C /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */;
->>>>>>> 5af08fcf2f56704767600e24a6508e2fef475e56
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -772,11 +763,7 @@
 		};
 		EF072673237C12AF00384D3E /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-			baseConfigurationReference = 65ACC621E0BA5DE6975C56E1 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */;
-=======
 			baseConfigurationReference = 96188B96ED193E1FA42AA675 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */;
->>>>>>> 5af08fcf2f56704767600e24a6508e2fef475e56
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

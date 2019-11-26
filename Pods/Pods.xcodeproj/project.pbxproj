@@ -6,19 +6,54 @@
 	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+		8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 09C092CF6EAEE62AB931C7C240F6EAC5 /* Build configuration list for PBXAggregateTarget "NMapsMap" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = NMapsMap;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		12C094C07D31AE723C6809E1739D2162 /* Pods-ARNavigationTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BDC306AF2ECD4792EE79986CC42325 /* Pods-ARNavigationTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		399D7B14FBFF478BFFE8C0CA8EB11E94 /* Pods-ARNavigation-ARNavigationUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6FAA9379185A72895B959FB95B8C6B3 /* Pods-ARNavigation-ARNavigationUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		41737B4D03A399AA315753435D494CC9 /* Pods-ARNavigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA4321C870B4C685789307F387DA206F /* Pods-ARNavigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12C094C07D31AE723C6809E1739D2162 /* Pods-ARNavigationTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC4AB73EDC242A9111E27BCDAD05F76B /* Pods-ARNavigationTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E3D93BED7EDCCACEE91EF68935991D3 /* Pods-ARNavigation-ARNavigationUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9D44E0E9153A05113DE31C6D3198E0 /* Pods-ARNavigation-ARNavigationUITests-dummy.m */; };
+		241A875482F872D51CB6FCFBC6D325AD /* Pods-ARNavigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4666F772B7EC5FCE0E0884C171922E60 /* Pods-ARNavigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DC59BC0032EAEE92621491BFC7AB5CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		548F37ABD5F6E05259641D4842C34E70 /* Pods-ARNavigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA1173C559F1B97DB8CC001603F3AE /* Pods-ARNavigation-dummy.m */; };
 		5A9816AC8D4623DC18FECE1B941C7474 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		752152F1D9F8F7E54DA818353BB5BDAB /* Pods-ARNavigation-ARNavigationUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB47BC5E8CAD0FA20A38BCF121DB91E /* Pods-ARNavigation-ARNavigationUITests-dummy.m */; };
-		8CD1EC1DDB2FF4D5F898C90743C496B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		98B04FE8F87EE7166E532C9D53097770 /* Pods-ARNavigationTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D6553C5191F8DD398D830B121C83F /* Pods-ARNavigationTests-dummy.m */; };
-		9B16D092C79145B0E7C9497104AF5647 /* Pods-ARNavigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB08ADE4C9E751A4B49F9071A8BCEBF /* Pods-ARNavigation-dummy.m */; };
-		A2FC0234C80434A2EF10E59501710E5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		715CCD7DA311781AF2EB0DB37E0784E5 /* Pods-ARNavigation-ARNavigationUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB5BA93533DDEC837F07C83B2A1A220F /* Pods-ARNavigation-ARNavigationUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A3DB44FCC0E1B865025BAC1D2B4DFED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		98B04FE8F87EE7166E532C9D53097770 /* Pods-ARNavigationTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9154E9AA4DDA3A9D9CB585FED089F /* Pods-ARNavigationTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2062929772E64E2C18F3461EA5C94F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		5251A3E5BB39B856CFAF0AB163FBFC7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
 		540EE05D3419DA43FD253481F153AF28 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -26,38 +61,57 @@
 			remoteGlobalIDString = B913894B62411B4A352B1E4B55B26064;
 			remoteInfo = "Pods-ARNavigation";
 		};
+		75F36C35FDEA06EA5B095201D27BB6C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E049F5F4E3BDC647F924FEF22D49D90;
+			remoteInfo = NMapsMap;
+		};
+		B3251946D5560FCE80572703B74A42CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E049F5F4E3BDC647F924FEF22D49D90;
+			remoteInfo = NMapsMap;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		015701CC524F68AAAA6E7D6337A4F99B /* Pods-ARNavigation-ARNavigationUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigation-ARNavigationUITests-Info.plist"; sourceTree = "<group>"; };
-		05BA121FFA42F5965346E16652CA3A35 /* Pods-ARNavigation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARNavigation-acknowledgements.markdown"; sourceTree = "<group>"; };
-		077B18B718F633C605C7A7F92C10DFF7 /* Pods-ARNavigation-ARNavigationUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARNavigation-ARNavigationUITests.modulemap"; sourceTree = "<group>"; };
-		07CC33C5439B4B294406D10F4BE93529 /* Pods-ARNavigation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigation-acknowledgements.plist"; sourceTree = "<group>"; };
-		18994038869A7472362C9EE0796B3752 /* Pods-ARNavigationTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigationTests-Info.plist"; sourceTree = "<group>"; };
-		1C2D6553C5191F8DD398D830B121C83F /* Pods-ARNavigationTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARNavigationTests-dummy.m"; sourceTree = "<group>"; };
+		00118D8A3D2B45A7812DE8517251074A /* Pods-ARNavigationTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigationTests-Info.plist"; sourceTree = "<group>"; };
+		11BE555159832DE7D2589940A619CBFD /* Pods-ARNavigation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigation-acknowledgements.plist"; sourceTree = "<group>"; };
 		219CE47CB7C9AC8AB24E6429C35A8D3C /* Pods_ARNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ARNavigation.framework; path = "Pods-ARNavigation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		294F1D8E1ED2CF11A0C5A73F65A05A4B /* Pods-ARNavigation-ARNavigationUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARNavigation-ARNavigationUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		32BDC306AF2ECD4792EE79986CC42325 /* Pods-ARNavigationTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARNavigationTests-umbrella.h"; sourceTree = "<group>"; };
+		3649350CF7F3C0AACF7AADFC641E0070 /* Pods-ARNavigation-ARNavigationUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARNavigation-ARNavigationUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		40FA1173C559F1B97DB8CC001603F3AE /* Pods-ARNavigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARNavigation-dummy.m"; sourceTree = "<group>"; };
+		427C4A58CF5EED3E75D46DA4769BB10C /* Pods-ARNavigation-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ARNavigation-frameworks.sh"; sourceTree = "<group>"; };
 		4342AB0199CB239FED208B5D21E15B21 /* Pods_ARNavigationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ARNavigationTests.framework; path = "Pods-ARNavigationTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		472CA12C046031F08CF20A9CE40BCD8A /* Pods-ARNavigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARNavigation.modulemap"; sourceTree = "<group>"; };
-		6550451F311932992B888FA2D13B521E /* Pods-ARNavigationTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARNavigationTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6612E4D12E8E3459A515106241E51EEB /* Pods-ARNavigationTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARNavigationTests.modulemap"; sourceTree = "<group>"; };
-		6FA392BB3B176459F91DC58661168FF2 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigation-ARNavigationUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6FB08ADE4C9E751A4B49F9071A8BCEBF /* Pods-ARNavigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARNavigation-dummy.m"; sourceTree = "<group>"; };
-		7F1C9F1D3C19A4B237A3BC6AEEDA6788 /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigation-ARNavigationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4666F772B7EC5FCE0E0884C171922E60 /* Pods-ARNavigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARNavigation-umbrella.h"; sourceTree = "<group>"; };
+		46782C5B44049FBF6D78669F667E983F /* Pods-ARNavigationTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigationTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		47BEEED51638FDB1BA83448AF078151B /* NMapsMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapsMap.framework; path = framework/NMapsMap.framework; sourceTree = "<group>"; };
+		4E092E2E79993E5EE308452A6BDB958E /* Pods-ARNavigationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4FF8A317A97DACA4CE68201022FBD322 /* Pods-ARNavigation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARNavigation-acknowledgements.markdown"; sourceTree = "<group>"; };
+		795159DAA2CBE42CB1ECC30187DE3DEE /* Pods-ARNavigation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigation-Info.plist"; sourceTree = "<group>"; };
+		7F30762B3FAD2CA46658891B0ACDE3FD /* Pods-ARNavigationTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARNavigationTests.modulemap"; sourceTree = "<group>"; };
+		7FA8D421FE34B4A5D0AF6C1FC74649BA /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigation-ARNavigationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7FB4154349916CA7D8F6BCF373C8FBFC /* Pods_ARNavigation_ARNavigationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ARNavigation_ARNavigationUITests.framework; path = "Pods-ARNavigation-ARNavigationUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		808336DE816438724C06B48CB228AA4D /* Pods-ARNavigation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigation-Info.plist"; sourceTree = "<group>"; };
+		88EEF1585B3554F3F94E424ADD87D3BA /* Pods-ARNavigationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigationTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B208F4CD97B42A999DE49573D1848FA /* Pods-ARNavigationTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARNavigationTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A399122BC3048F95E92C6A44B1EDFD76 /* Pods-ARNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigation.debug.xcconfig"; sourceTree = "<group>"; };
-		C6FAA9379185A72895B959FB95B8C6B3 /* Pods-ARNavigation-ARNavigationUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARNavigation-ARNavigationUITests-umbrella.h"; sourceTree = "<group>"; };
-		C70DE35054B677E60342739673D8B3A8 /* Pods-ARNavigationTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigationTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D2A7FF8C264252D184ECBD7943C8A039 /* Pods-ARNavigationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigationTests.release.xcconfig"; sourceTree = "<group>"; };
-		DA4321C870B4C685789307F387DA206F /* Pods-ARNavigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARNavigation-umbrella.h"; sourceTree = "<group>"; };
-		DB27438F687870D11138C6794110B747 /* Pods-ARNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigation.release.xcconfig"; sourceTree = "<group>"; };
-		E12F57498D7AC871598AF9195F35625D /* Pods-ARNavigation-ARNavigationUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigation-ARNavigationUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E53B34F8473D5B620A6E2AAA9DD6F6B8 /* Pods-ARNavigationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FBB47BC5E8CAD0FA20A38BCF121DB91E /* Pods-ARNavigation-ARNavigationUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARNavigation-ARNavigationUITests-dummy.m"; sourceTree = "<group>"; };
+		AC4AB73EDC242A9111E27BCDAD05F76B /* Pods-ARNavigationTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARNavigationTests-umbrella.h"; sourceTree = "<group>"; };
+		B50A41F99A63F117939EE0BE2AE4356A /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
+		B729AD92B982BB064367E03880420E41 /* Pods-ARNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigation.release.xcconfig"; sourceTree = "<group>"; };
+		BB5BA93533DDEC837F07C83B2A1A220F /* Pods-ARNavigation-ARNavigationUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARNavigation-ARNavigationUITests-umbrella.h"; sourceTree = "<group>"; };
+		C2A21D1FAA41FDBA19593D2613998FF3 /* Pods-ARNavigation-ARNavigationUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ARNavigation-ARNavigationUITests-frameworks.sh"; sourceTree = "<group>"; };
+		CAC9154E9AA4DDA3A9D9CB585FED089F /* Pods-ARNavigationTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARNavigationTests-dummy.m"; sourceTree = "<group>"; };
+		CFC00BFCD971D60383D6FBC00ABA8631 /* Pods-ARNavigation-ARNavigationUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigation-ARNavigationUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D9CC41D2E6F364AF9D68E2E47EB23AED /* Pods-ARNavigation-ARNavigationUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARNavigation-ARNavigationUITests.modulemap"; sourceTree = "<group>"; };
+		DC9D44E0E9153A05113DE31C6D3198E0 /* Pods-ARNavigation-ARNavigationUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARNavigation-ARNavigationUITests-dummy.m"; sourceTree = "<group>"; };
+		DF3C4E39F9663AFA861926592FF1FCBC /* Pods-ARNavigation-ARNavigationUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARNavigation-ARNavigationUITests-Info.plist"; sourceTree = "<group>"; };
+		E6584633471521623EBB84862538826C /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigation-ARNavigationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA8312E6C3DAE84C93CA3A8C95E601F1 /* NMapsMap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.xcconfig; sourceTree = "<group>"; };
+		EEC5D0A79B28C2485B39ACDD01618A29 /* Pods-ARNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARNavigation.debug.xcconfig"; sourceTree = "<group>"; };
+		F133C747BDE7538C936AE4E1FE24C3E4 /* Pods-ARNavigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARNavigation.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,33 +123,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8885EB316DB534706A53EDBDA7E77209 /* Frameworks */ = {
+		E30993AE937A33A455029FFFC5CE74F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CD1EC1DDB2FF4D5F898C90743C496B9 /* Foundation.framework in Frameworks */,
+				3DC59BC0032EAEE92621491BFC7AB5CE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F499F0DF5AB58FE4818BB1961159215 /* Frameworks */ = {
+		EF8BF33EC40172B8FBA5824FDF96DF64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2FC0234C80434A2EF10E59501710E5D /* Foundation.framework in Frameworks */,
+				8A3DB44FCC0E1B865025BAC1D2B4DFED /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02B0C72C819EE567BB039473D34BBA96 /* Targets Support Files */ = {
+		0C3BD8627F2A92D5106235AF78AD0883 /* Pods-ARNavigationTests */ = {
 			isa = PBXGroup;
 			children = (
-				5252763D978D5D5292630B2C379EB5D0 /* Pods-ARNavigation */,
-				8B49C6971AEE6DF34B955A69BFA606F8 /* Pods-ARNavigation-ARNavigationUITests */,
-				9C2512841A818B9ADE14166572E4AACC /* Pods-ARNavigationTests */,
+				7F30762B3FAD2CA46658891B0ACDE3FD /* Pods-ARNavigationTests.modulemap */,
+				9B208F4CD97B42A999DE49573D1848FA /* Pods-ARNavigationTests-acknowledgements.markdown */,
+				46782C5B44049FBF6D78669F667E983F /* Pods-ARNavigationTests-acknowledgements.plist */,
+				CAC9154E9AA4DDA3A9D9CB585FED089F /* Pods-ARNavigationTests-dummy.m */,
+				00118D8A3D2B45A7812DE8517251074A /* Pods-ARNavigationTests-Info.plist */,
+				AC4AB73EDC242A9111E27BCDAD05F76B /* Pods-ARNavigationTests-umbrella.h */,
+				4E092E2E79993E5EE308452A6BDB958E /* Pods-ARNavigationTests.debug.xcconfig */,
+				88EEF1585B3554F3F94E424ADD87D3BA /* Pods-ARNavigationTests.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-ARNavigationTests";
+			path = "Target Support Files/Pods-ARNavigationTests";
+			sourceTree = "<group>";
+		};
+		21C8AF4996A3DD2CAC8F503D9A7AF77E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4424A8B74CA11F08540B63163AB9C226 /* NMapsMap */,
+				82781A92B384BE77BD149D9B112B9435 /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3077A4941E24C5752587341E91C3B1D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA8312E6C3DAE84C93CA3A8C95E601F1 /* NMapsMap.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NMapsMap";
+			sourceTree = "<group>";
+		};
+		34C40F217D8BEF0270E887F356EB10EF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B50A41F99A63F117939EE0BE2AE4356A /* SwiftLint.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		3CB98B86449158D8829A7D8F4F463F09 /* Pods-ARNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				F133C747BDE7538C936AE4E1FE24C3E4 /* Pods-ARNavigation.modulemap */,
+				4FF8A317A97DACA4CE68201022FBD322 /* Pods-ARNavigation-acknowledgements.markdown */,
+				11BE555159832DE7D2589940A619CBFD /* Pods-ARNavigation-acknowledgements.plist */,
+				40FA1173C559F1B97DB8CC001603F3AE /* Pods-ARNavigation-dummy.m */,
+				427C4A58CF5EED3E75D46DA4769BB10C /* Pods-ARNavigation-frameworks.sh */,
+				795159DAA2CBE42CB1ECC30187DE3DEE /* Pods-ARNavigation-Info.plist */,
+				4666F772B7EC5FCE0E0884C171922E60 /* Pods-ARNavigation-umbrella.h */,
+				EEC5D0A79B28C2485B39ACDD01618A29 /* Pods-ARNavigation.debug.xcconfig */,
+				B729AD92B982BB064367E03880420E41 /* Pods-ARNavigation.release.xcconfig */,
+			);
+			name = "Pods-ARNavigation";
+			path = "Target Support Files/Pods-ARNavigation";
+			sourceTree = "<group>";
+		};
+		4424A8B74CA11F08540B63163AB9C226 /* NMapsMap */ = {
+			isa = PBXGroup;
+			children = (
+				C106BDA3ABBFB3EFE0E723DC9983EF59 /* Frameworks */,
+				3077A4941E24C5752587341E91C3B1D5 /* Support Files */,
+			);
+			name = NMapsMap;
+			path = NMapsMap;
 			sourceTree = "<group>";
 		};
 		488A9941BB3259A8EDB24F2DBE993E60 /* Products */ = {
@@ -108,52 +222,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5252763D978D5D5292630B2C379EB5D0 /* Pods-ARNavigation */ = {
+		82781A92B384BE77BD149D9B112B9435 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				472CA12C046031F08CF20A9CE40BCD8A /* Pods-ARNavigation.modulemap */,
-				05BA121FFA42F5965346E16652CA3A35 /* Pods-ARNavigation-acknowledgements.markdown */,
-				07CC33C5439B4B294406D10F4BE93529 /* Pods-ARNavigation-acknowledgements.plist */,
-				6FB08ADE4C9E751A4B49F9071A8BCEBF /* Pods-ARNavigation-dummy.m */,
-				808336DE816438724C06B48CB228AA4D /* Pods-ARNavigation-Info.plist */,
-				DA4321C870B4C685789307F387DA206F /* Pods-ARNavigation-umbrella.h */,
-				A399122BC3048F95E92C6A44B1EDFD76 /* Pods-ARNavigation.debug.xcconfig */,
-				DB27438F687870D11138C6794110B747 /* Pods-ARNavigation.release.xcconfig */,
+				34C40F217D8BEF0270E887F356EB10EF /* Support Files */,
 			);
-			name = "Pods-ARNavigation";
-			path = "Target Support Files/Pods-ARNavigation";
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
-		8B49C6971AEE6DF34B955A69BFA606F8 /* Pods-ARNavigation-ARNavigationUITests */ = {
+		8F5B888AEEE2ABC829B4899E1E9E64FB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				077B18B718F633C605C7A7F92C10DFF7 /* Pods-ARNavigation-ARNavigationUITests.modulemap */,
-				294F1D8E1ED2CF11A0C5A73F65A05A4B /* Pods-ARNavigation-ARNavigationUITests-acknowledgements.markdown */,
-				E12F57498D7AC871598AF9195F35625D /* Pods-ARNavigation-ARNavigationUITests-acknowledgements.plist */,
-				FBB47BC5E8CAD0FA20A38BCF121DB91E /* Pods-ARNavigation-ARNavigationUITests-dummy.m */,
-				015701CC524F68AAAA6E7D6337A4F99B /* Pods-ARNavigation-ARNavigationUITests-Info.plist */,
-				C6FAA9379185A72895B959FB95B8C6B3 /* Pods-ARNavigation-ARNavigationUITests-umbrella.h */,
-				7F1C9F1D3C19A4B237A3BC6AEEDA6788 /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */,
-				6FA392BB3B176459F91DC58661168FF2 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */,
+				3CB98B86449158D8829A7D8F4F463F09 /* Pods-ARNavigation */,
+				EB0B52B0987EC3A8E6085F93B5629066 /* Pods-ARNavigation-ARNavigationUITests */,
+				0C3BD8627F2A92D5106235AF78AD0883 /* Pods-ARNavigationTests */,
 			);
-			name = "Pods-ARNavigation-ARNavigationUITests";
-			path = "Target Support Files/Pods-ARNavigation-ARNavigationUITests";
-			sourceTree = "<group>";
-		};
-		9C2512841A818B9ADE14166572E4AACC /* Pods-ARNavigationTests */ = {
-			isa = PBXGroup;
-			children = (
-				6612E4D12E8E3459A515106241E51EEB /* Pods-ARNavigationTests.modulemap */,
-				6550451F311932992B888FA2D13B521E /* Pods-ARNavigationTests-acknowledgements.markdown */,
-				C70DE35054B677E60342739673D8B3A8 /* Pods-ARNavigationTests-acknowledgements.plist */,
-				1C2D6553C5191F8DD398D830B121C83F /* Pods-ARNavigationTests-dummy.m */,
-				18994038869A7472362C9EE0796B3752 /* Pods-ARNavigationTests-Info.plist */,
-				32BDC306AF2ECD4792EE79986CC42325 /* Pods-ARNavigationTests-umbrella.h */,
-				E53B34F8473D5B620A6E2AAA9DD6F6B8 /* Pods-ARNavigationTests.debug.xcconfig */,
-				D2A7FF8C264252D184ECBD7943C8A039 /* Pods-ARNavigationTests.release.xcconfig */,
-			);
-			name = "Pods-ARNavigationTests";
-			path = "Target Support Files/Pods-ARNavigationTests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -164,13 +249,22 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		C106BDA3ABBFB3EFE0E723DC9983EF59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47BEEED51638FDB1BA83448AF078151B /* NMapsMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				21C8AF4996A3DD2CAC8F503D9A7AF77E /* Pods */,
 				488A9941BB3259A8EDB24F2DBE993E60 /* Products */,
-				02B0C72C819EE567BB039473D34BBA96 /* Targets Support Files */,
+				8F5B888AEEE2ABC829B4899E1E9E64FB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,22 +276,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EB0B52B0987EC3A8E6085F93B5629066 /* Pods-ARNavigation-ARNavigationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D9CC41D2E6F364AF9D68E2E47EB23AED /* Pods-ARNavigation-ARNavigationUITests.modulemap */,
+				3649350CF7F3C0AACF7AADFC641E0070 /* Pods-ARNavigation-ARNavigationUITests-acknowledgements.markdown */,
+				CFC00BFCD971D60383D6FBC00ABA8631 /* Pods-ARNavigation-ARNavigationUITests-acknowledgements.plist */,
+				DC9D44E0E9153A05113DE31C6D3198E0 /* Pods-ARNavigation-ARNavigationUITests-dummy.m */,
+				C2A21D1FAA41FDBA19593D2613998FF3 /* Pods-ARNavigation-ARNavigationUITests-frameworks.sh */,
+				DF3C4E39F9663AFA861926592FF1FCBC /* Pods-ARNavigation-ARNavigationUITests-Info.plist */,
+				BB5BA93533DDEC837F07C83B2A1A220F /* Pods-ARNavigation-ARNavigationUITests-umbrella.h */,
+				E6584633471521623EBB84862538826C /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */,
+				7FA8D421FE34B4A5D0AF6C1FC74649BA /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */,
+			);
+			name = "Pods-ARNavigation-ARNavigationUITests";
+			path = "Target Support Files/Pods-ARNavigation-ARNavigationUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		56564F3D9E2252489195FBF5C59576A3 /* Headers */ = {
+		6FCEB56D1B6B27D458BC1A4CF1D6EE68 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41737B4D03A399AA315753435D494CC9 /* Pods-ARNavigation-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E61EE10A3A7029088CD68AC37206008 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				399D7B14FBFF478BFFE8C0CA8EB11E94 /* Pods-ARNavigation-ARNavigationUITests-umbrella.h in Headers */,
+				715CCD7DA311781AF2EB0DB37E0784E5 /* Pods-ARNavigation-ARNavigationUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +309,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				12C094C07D31AE723C6809E1739D2162 /* Pods-ARNavigationTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791496D7E846E5769EA4C8753BE2793D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241A875482F872D51CB6FCFBC6D325AD /* Pods-ARNavigation-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,16 +344,18 @@
 		};
 		B40DBB651A3CDE418CFA52079852908B /* Pods-ARNavigation-ARNavigationUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F119E5071C07B1F7710FA793FD25BC1 /* Build configuration list for PBXNativeTarget "Pods-ARNavigation-ARNavigationUITests" */;
+			buildConfigurationList = 59BB1CC76E5A965084F765DCCDCFED8C /* Build configuration list for PBXNativeTarget "Pods-ARNavigation-ARNavigationUITests" */;
 			buildPhases = (
-				5E61EE10A3A7029088CD68AC37206008 /* Headers */,
-				FBD6B4B0711DB12024D97D5A5B722DB5 /* Sources */,
-				9F499F0DF5AB58FE4818BB1961159215 /* Frameworks */,
-				22070C490EEF3C202ED8BBF02EAAC366 /* Resources */,
+				6FCEB56D1B6B27D458BC1A4CF1D6EE68 /* Headers */,
+				BEB1A2C19E37F2CC5B6CDC9A38822B87 /* Sources */,
+				EF8BF33EC40172B8FBA5824FDF96DF64 /* Frameworks */,
+				99734277054A893282F19BD1DC34196A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2A64E149F53429F1C51102E60124E8A8 /* PBXTargetDependency */,
+				2DFF776AF2885BE255DB57B94799E049 /* PBXTargetDependency */,
 			);
 			name = "Pods-ARNavigation-ARNavigationUITests";
 			productName = "Pods-ARNavigation-ARNavigationUITests";
@@ -251,16 +364,18 @@
 		};
 		B913894B62411B4A352B1E4B55B26064 /* Pods-ARNavigation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 248C4C750D496C978D965CA3002ADB09 /* Build configuration list for PBXNativeTarget "Pods-ARNavigation" */;
+			buildConfigurationList = B685F97B4AC31346C92D336672CD55CB /* Build configuration list for PBXNativeTarget "Pods-ARNavigation" */;
 			buildPhases = (
-				56564F3D9E2252489195FBF5C59576A3 /* Headers */,
-				EAC82B3A23422F1CC74923965B2BE11D /* Sources */,
-				8885EB316DB534706A53EDBDA7E77209 /* Frameworks */,
-				C664917526DE45549B7C05A629A904DD /* Resources */,
+				791496D7E846E5769EA4C8753BE2793D /* Headers */,
+				05B0566968ED616303F6A74EBEB75C49 /* Sources */,
+				E30993AE937A33A455029FFFC5CE74F6 /* Frameworks */,
+				30D33CA681D42906BAE0C413110EB217 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A57FCFDE9DF947B9F0153BD79E59176E /* PBXTargetDependency */,
+				77C6068725DC1EA8625EE51FFC7AB2D6 /* PBXTargetDependency */,
 			);
 			name = "Pods-ARNavigation";
 			productName = "Pods-ARNavigation";
@@ -288,22 +403,24 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */,
 				B913894B62411B4A352B1E4B55B26064 /* Pods-ARNavigation */,
 				B40DBB651A3CDE418CFA52079852908B /* Pods-ARNavigation-ARNavigationUITests */,
 				6D2676F9C93EDEA424F35F35B8F950D5 /* Pods-ARNavigationTests */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		22070C490EEF3C202ED8BBF02EAAC366 /* Resources */ = {
+		30D33CA681D42906BAE0C413110EB217 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C664917526DE45549B7C05A629A904DD /* Resources */ = {
+		99734277054A893282F19BD1DC34196A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,6 +437,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		05B0566968ED616303F6A74EBEB75C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				548F37ABD5F6E05259641D4842C34E70 /* Pods-ARNavigation-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB1A2C19E37F2CC5B6CDC9A38822B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3D93BED7EDCCACEE91EF68935991D3 /* Pods-ARNavigation-ARNavigationUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C093E9A3ECE23A4DFEFF48D7C49B2686 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,37 +461,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAC82B3A23422F1CC74923965B2BE11D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B16D092C79145B0E7C9497104AF5647 /* Pods-ARNavigation-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FBD6B4B0711DB12024D97D5A5B722DB5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				752152F1D9F8F7E54DA818353BB5BDAB /* Pods-ARNavigation-ARNavigationUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2A64E149F53429F1C51102E60124E8A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NMapsMap;
+			target = 8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */;
+			targetProxy = 75F36C35FDEA06EA5B095201D27BB6C2 /* PBXContainerItemProxy */;
+		};
+		2DFF776AF2885BE255DB57B94799E049 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 5251A3E5BB39B856CFAF0AB163FBFC7F /* PBXContainerItemProxy */;
+		};
 		4AA91F607EF4508702600DE14382C82C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ARNavigation";
 			target = B913894B62411B4A352B1E4B55B26064 /* Pods-ARNavigation */;
 			targetProxy = 540EE05D3419DA43FD253481F153AF28 /* PBXContainerItemProxy */;
 		};
+		77C6068725DC1EA8625EE51FFC7AB2D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 2062929772E64E2C18F3461EA5C94F12 /* PBXContainerItemProxy */;
+		};
+		A57FCFDE9DF947B9F0153BD79E59176E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NMapsMap;
+			target = 8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */;
+			targetProxy = B3251946D5560FCE80572703B74A42CF /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		189DE37875CAD359FCBFF58EC7A36F7E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E53B34F8473D5B620A6E2AAA9DD6F6B8 /* Pods-ARNavigationTests.debug.xcconfig */;
+			baseConfigurationReference = 4E092E2E79993E5EE308452A6BDB958E /* Pods-ARNavigationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -393,6 +534,45 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		250551AAEA9C4D9589C2EB8270BE141F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA8D421FE34B4A5D0AF6C1FC74649BA /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		257497152829C177993B5EC99C1D227A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -456,7 +636,7 @@
 		};
 		730056A864D99EE6E64D70C055F9C6AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2A7FF8C264252D184ECBD7943C8A039 /* Pods-ARNavigationTests.release.xcconfig */;
+			baseConfigurationReference = 88EEF1585B3554F3F94E424ADD87D3BA /* Pods-ARNavigationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -493,9 +673,9 @@
 			};
 			name = Release;
 		};
-		BD37AF969E6746CC0F200BEEC355F652 /* Release */ = {
+		7FFC11F3F9A6FA0DE0CAD2AEF26850A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB27438F687870D11138C6794110B747 /* Pods-ARNavigation.release.xcconfig */;
+			baseConfigurationReference = B729AD92B982BB064367E03880420E41 /* Pods-ARNavigation.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -532,9 +712,42 @@
 			};
 			name = Release;
 		};
-		C69F45AD4EF016E2BDD13BEB80C47D06 /* Debug */ = {
+		84D7C4574E8F0F3095623F0E06F5B402 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F1C9F1D3C19A4B237A3BC6AEEDA6788 /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */;
+			baseConfigurationReference = B50A41F99A63F117939EE0BE2AE4356A /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		911F1B3EE184AB98137072146F93B96C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA8312E6C3DAE84C93CA3A8C95E601F1 /* NMapsMap.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4817E62C381B3292C9C1F7211382D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6584633471521623EBB84862538826C /* Pods-ARNavigation-ARNavigationUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -557,44 +770,6 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D9433251BBCA6F0B6A2A1A7179A33C1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A399122BC3048F95E92C6A44B1EDFD76 /* Pods-ARNavigation.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ARNavigation/Pods-ARNavigation-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ARNavigation/Pods-ARNavigation.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -672,9 +847,25 @@
 			};
 			name = Debug;
 		};
-		F48455AF270F625BAA00B409E324806A /* Release */ = {
+		DEED47E09AF743F48544C1C4FEADEF47 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FA392BB3B176459F91DC58661168FF2 /* Pods-ARNavigation-ARNavigationUITests.release.xcconfig */;
+			baseConfigurationReference = B50A41F99A63F117939EE0BE2AE4356A /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEEEA645939574AD15165695C267AAC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEC5D0A79B28C2485B39ACDD01618A29 /* Pods-ARNavigation.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -687,7 +878,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ARNavigation/Pods-ARNavigation-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -696,7 +887,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ARNavigation-ARNavigationUITests/Pods-ARNavigation-ARNavigationUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-ARNavigation/Pods-ARNavigation.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -705,20 +896,36 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F1A07D586CA0C8DACA13B369C0C52C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA8312E6C3DAE84C93CA3A8C95E601F1 /* NMapsMap.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		248C4C750D496C978D965CA3002ADB09 /* Build configuration list for PBXNativeTarget "Pods-ARNavigation" */ = {
+		09C092CF6EAEE62AB931C7C240F6EAC5 /* Build configuration list for PBXAggregateTarget "NMapsMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D9433251BBCA6F0B6A2A1A7179A33C1F /* Debug */,
-				BD37AF969E6746CC0F200BEEC355F652 /* Release */,
+				911F1B3EE184AB98137072146F93B96C /* Debug */,
+				F1A07D586CA0C8DACA13B369C0C52C13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -732,11 +939,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F119E5071C07B1F7710FA793FD25BC1 /* Build configuration list for PBXNativeTarget "Pods-ARNavigation-ARNavigationUITests" */ = {
+		59BB1CC76E5A965084F765DCCDCFED8C /* Build configuration list for PBXNativeTarget "Pods-ARNavigation-ARNavigationUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C69F45AD4EF016E2BDD13BEB80C47D06 /* Debug */,
-				F48455AF270F625BAA00B409E324806A /* Release */,
+				D4817E62C381B3292C9C1F7211382D5A /* Debug */,
+				250551AAEA9C4D9589C2EB8270BE141F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -746,6 +953,24 @@
 			buildConfigurations = (
 				189DE37875CAD359FCBFF58EC7A36F7E /* Debug */,
 				730056A864D99EE6E64D70C055F9C6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEED47E09AF743F48544C1C4FEADEF47 /* Debug */,
+				84D7C4574E8F0F3095623F0E06F5B402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B685F97B4AC31346C92D336672CD55CB /* Build configuration list for PBXNativeTarget "Pods-ARNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEEEA645939574AD15165695C267AAC2 /* Debug */,
+				7FFC11F3F9A6FA0DE0CAD2AEF26850A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
