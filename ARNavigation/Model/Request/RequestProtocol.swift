@@ -25,7 +25,7 @@ extension RequestError: LocalizedError {
 typealias requestCompletionHandler = (Bool, Any?, RequestError?) -> Void
 
 protocol RequestProtocol {
-    func createURLComponents() -> URLComponents
-    func request(_ data: LocationInfo, completion: @escaping requestCompletionHandler)
+    func createURLRequest(_ start: String, _ goal: String) -> URLRequest
+    func request(_ data: NavigationData, completion: @escaping requestCompletionHandler)
 }
 

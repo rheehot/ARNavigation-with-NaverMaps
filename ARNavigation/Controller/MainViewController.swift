@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     private var authState: NMFAuthState!
     private var nmMarker = [NMFMarker]()
     private var markerCnt: Int = 0
-    private var locationInfo: LocationInfo?
+    private var locationInfo: NavigationData?
     private var currentLocationData: LocationData?
     private var drivingData: Driving?
     private var drivingPath: [[Double]]?
@@ -89,25 +89,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    @IBAction func tappedNaviButton(_ sender: UIButton) {
-        requestNavigationData { (isSuccess) in
-            if isSuccess {
-                DispatchQueue.main.async {
-                    self.makePathOverlay()
-                }
-            } else {
-                print("실패")
-            }
-        }
-    }
-    
-    @IBAction func tappedARNaviButton(_ sender: UIButton) {
-//         let arVC = ARViewController()
-//         guard let path = drivingPath else { return }
-//         arVC.getDrivePath(path)
-//         self.present(arVC, animated: true)
-    }
-    
     func requestNavigationData(completion: @escaping (Bool) -> Void) {
         
         guard let startLat = nmMarker.first?.position.lat,
@@ -117,7 +98,7 @@ class MainViewController: UIViewController {
                 return
         }
 
-        var data = LocationInfo()
+        var data = NavigationData()
         data.startLocation = extractLocationData(startLat, startLng)
         data.goalLocation = extractLocationData(goalLat, goalLng)
         // 데이터 요청
