@@ -11,6 +11,12 @@ import NMapsMap
 
 extension NMGLatLng {
     var convertString: String {
-        return "\(self.lng),\(self.lat)"
+        "\(self.lng),\(self.lat)"
     }
+    
+    var convertedLatLng: NMGLatLng {
+         self.lat = floor((self.lat) * 1000000) / 1000000
+         self.lng = floor((self.lng) * 1000000) / 1000000
+         return self
+     }
 }

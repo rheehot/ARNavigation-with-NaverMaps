@@ -10,14 +10,19 @@ import Foundation
 import NMapsMap
 
 struct LocationData {
-    var locationName: String?           // 위치 이름
-    var latitude: Double?               // 위도
-    var longitude: Double?              // 경도
+    var locationName: String?
+    var latitude: Double?
+    var longitude: Double?
 }
 
 struct NavigationData {
-    var startLocation: NMGLatLng?    // 시작지점
-    var goalLocation: NMGLatLng?     // 도착지점
+    var startLocation: NMGLatLng
+    var goalLocation: NMGLatLng
+    
+    init(_ start: NMGLatLng, _ goal: NMGLatLng) {
+         self.startLocation = start
+         self.goalLocation = goal
+     }
 }
 
 

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+import NMapsMap
 
 struct Constants {
     static let NMFClientId: String = "NMFClientId"
@@ -15,23 +15,33 @@ struct Constants {
     static let baseURL: String = "https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving"
     static let clientIdHeader: String = "X-NCP-APIGW-API-KEY-ID"
     static let clientSecretHeader: String = "X-NCP-APIGW-API-KEY"
+    static let trafast: String = "trafast"
 }
 
 class Request: RequestProtocol {
-    // Client Key
-    private let clientId: String = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientId) as! String
-    private let clientSecret: String = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientSecret) as! String
+    private var directionPoints = [NMGLatLng]()
+    private var clientId: String = ""
+    private var clientSecret: String = ""
+    
+    private func initClientKey() {
+        guard let id = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientId) as? String,
+              let secret = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientSecret) as? String else {
+                return
+        }
+        self.clientId = id
+        self.clientSecret = secret
+    }
     
     // URLComponents 생성
     func createURLRequest(_ start: String, _ goal: String) -> URLRequest {
-        // driving 기본 base url
+        self.initClientKey()
         var urlComponents = URLComponents(string: Constants.baseURL)
         let start = start
         let goal = goal
         let parameter: [String: String] = [
             "start": start,
             "goal": goal,
-            "option": "trafast"
+            "option": Constants.trafast
         ]
         urlComponents?.queryItems = parameter.map{ (key, value) in
             URLQueryItem(name: key, value: value)
@@ -49,12 +59,8 @@ class Request: RequestProtocol {
     
     // Driving API 요청
     func request(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
-        
-        guard let start = data.startLocation?.convertString,
-            let goal = data.goalLocation?.convertString else {
-                completion(false, nil, RequestError.requestFailed)
-                return
-        }
+        let start = data.startLocation.convertString
+        let goal = data.goalLocation.convertString
         let request = createURLRequest(start, goal)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil else {
@@ -69,11 +75,31 @@ class Request: RequestProtocol {
             let decoder = JSONDecoder()
             do {
                 let driving = try decoder.decode(Driving.self, from: data)
+                self.makePoints(driving.route?.trafast?.first?.path)
                 completion(true, driving, nil)
             } catch {
                 print("error trying to convert data to JSON")
                 completion(false, nil, RequestError.requestFailed)
             }
         }.resume()
+    }
+    
+    private func makePoints(_ paths: [[Double]]?) {
+        paths?.forEach({ (path) in
+            guard let lat = path.last,
+                let lng = path.first else {
+                    return
+            }
+            let latlng = NMGLatLng(lat: lat, lng: lng)
+            self.directionPoints.append(latlng)
+        })
+    }
+    
+    func removeAllPoints() {
+        self.directionPoints.removeAll()
+    }
+    
+    func getDirectionPoints() -> [NMGLatLng] {
+        return self.directionPoints
     }
 }
