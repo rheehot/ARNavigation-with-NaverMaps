@@ -1,18 +1,8 @@
 # ARNavigation 
 
+Naver Maps를 활용한 ARNavigation  
 
-### 주제 선정 배경
-- 카메라에서 보여지는 화면에 위치 정보를 연동하여 해당 위치의 길찾기 정보 혹은 지도 정보를 Overlay형태로 보여줍니다. 
+## 개요
 
-### 개발 요구 사항
-- 네이버 지도 SDK 연동 
-- 위치 정보를 정확하게 인식하는 화면
-- 카메라 프리뷰 화면
-- Overlay 형태로 현재 위치를 표출하는 화면
-
-### 개발 언어 
-- iOS : Swift
-- Android: Kotlin
-
-### 개발 환경
-- 최소 지원 버전 : iOS 11
+- Naver SDK iOS 연동
+- Naver Direction API를 활용하여 일반 길찾기 기능 구현
