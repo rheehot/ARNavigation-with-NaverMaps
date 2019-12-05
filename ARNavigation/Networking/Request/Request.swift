@@ -19,7 +19,7 @@ struct Constants {
 }
 
 class Request: RequestProtocol {
-    private var directionPoints = [NMGLatLng]()
+    
     private var clientId: String = ""
     private var clientSecret: String = ""
     
@@ -32,7 +32,6 @@ class Request: RequestProtocol {
         self.clientSecret = secret
     }
     
-    // URLComponents 생성
     func createURLRequest(_ start: String, _ goal: String) -> URLRequest {
         self.initClientKey()
         var urlComponents = URLComponents(string: Constants.baseURL)
@@ -57,7 +56,6 @@ class Request: RequestProtocol {
         return request
     }
     
-    // Driving API 요청
     func request(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
         let start = data.startLocation.convertString
         let goal = data.goalLocation.convertString
@@ -82,24 +80,5 @@ class Request: RequestProtocol {
                 completion(false, nil, RequestError.requestFailed)
             }
         }.resume()
-    }
-    
-    private func makePoints(_ paths: [[Double]]?) {
-        paths?.forEach({ (path) in
-            guard let lat = path.last,
-                let lng = path.first else {
-                    return
-            }
-            let latlng = NMGLatLng(lat: lat, lng: lng)
-            self.directionPoints.append(latlng)
-        })
-    }
-    
-    func removeAllPoints() {
-        self.directionPoints.removeAll()
-    }
-    
-    func getDirectionPoints() -> [NMGLatLng] {
-        return self.directionPoints
     }
 }

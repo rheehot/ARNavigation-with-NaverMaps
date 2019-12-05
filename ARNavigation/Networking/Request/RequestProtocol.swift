@@ -8,7 +8,6 @@
 
 import Foundation
 
-// Request시 발생한 에러 핸들링
 extension RequestError: LocalizedError {
     var error: String? {
         switch self {

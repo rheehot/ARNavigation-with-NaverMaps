@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     // MARK: - Properties
     private var nmMarker = [NMFMarker]()
     private var nmPath: NMFPath?
-    private var viewModel = Request()
+    private var mainViewModel = MainViewModel()
     
     // MARK:- Properties
     private var authState: NMFAuthState!
@@ -30,41 +30,17 @@ class MainViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func tappedNaviButton(_ sender: UIButton) {
-        self.requestNavigationData()
+        mainViewModel.requestFetchData()
     }
     
     @IBAction func tappedARNaviButton(_ sender: UIButton) {
-        //         let arVC = ARViewController()
-        //         guard let path = drivingPath else { return }
-        //         arVC.getDrivePath(path)
-        //         self.present(arVC, animated: true)
+
     }
-    
-    // MARK: - Request
-    private func requestNavigationData() {
-        guard let start = nmMarker.first?.position,
-            let goal = nmMarker.last?.position else {
-                return
-        }
-        let data = NavigationData(start, goal)
-        
-        viewModel.request(data) { [weak self] (isSuccess, data, error) in
-            if isSuccess {
-                self?.makePathOverlay()
-                print("성공")
-                
-            } else {
-                print("실패")
-                print(error?.localizedDescription as Any)
-            }
-        }
-    }
-    
     
     private func makePathOverlay() {
         DispatchQueue.main.async {
-            self.nmPath = NMFPath(points: self.viewModel.getDirectionPoints())
-            self.nmPath?.mapView = self.naverMapView.mapView
+            // self.nmPath = NMFPath(points: self.viewModel.getDirectionPoints())
+            // self.nmPath?.mapView = self.naverMapView.mapView
         }
     }
     
@@ -99,7 +75,7 @@ extension MainViewController: NMFMapViewDelegate {
     private func resetMapMarker() {
         nmMarker.forEach { $0.mapView = nil }
         nmMarker.removeAll()
-        self.viewModel.removeAllPoints()
+        self.mainViewModel.removeAllPoints()
         nmPath?.mapView = nil
     }
 }

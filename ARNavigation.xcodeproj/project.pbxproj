@@ -20,6 +20,7 @@
 		EF072675237C162B00384D3E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072674237C162B00384D3E /* ARViewController.swift */; };
 		EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */; };
 		EF8499BD238D519A00A0F7B2 /* NMGLatLng+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */; };
+		EF8AF7C923992C8B00DEA81F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AF7C823992C8B00DEA81F /* MainViewModel.swift */; };
 		EFB0FDE9237EA595005EEDE2 /* Driving.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDE8237EA595005EEDE2 /* Driving.swift */; };
 		EFB0FDED237EA672005EEDE2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDEC237EA672005EEDE2 /* Request.swift */; };
 		EFB0FDEF237EA67D005EEDE2 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDEE237EA67D005EEDE2 /* RequestProtocol.swift */; };
@@ -72,11 +73,12 @@
 		EF072674237C162B00384D3E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = ARNavigation/Controller/ARViewController.swift; sourceTree = SOURCE_ROOT; };
 		EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreLocation+Extension.swift"; path = "ARNavigation/Extension/CoreLocation+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NMGLatLng+Extension.swift"; sourceTree = "<group>"; };
+		EF8AF7C823992C8B00DEA81F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EFB0FDE8237EA595005EEDE2 /* Driving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Driving.swift; path = ARNavigation/Model/Navigation/Driving.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDEC237EA672005EEDE2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Request.swift; path = ARNavigation/Model/Request/Request.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDEC237EA672005EEDE2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Request.swift; path = ARNavigation/Networking/Request/Request.swift; sourceTree = SOURCE_ROOT; };
 		EFB0FDEE237EA67D005EEDE2 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationData.swift; path = ARNavigation/Model/Location/LocationData.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDF3237EA7F2005EEDE2 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestError.swift; path = ARNavigation/Model/Request/RequestError.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDF3237EA7F2005EEDE2 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestError.swift; path = ARNavigation/Networking/Request/RequestError.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,8 @@
 		EF072643237C12AC00384D3E /* ARNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				EF8AF7CA239938B000DEA81F /* Networking */,
+				EF8499D1239627CD00A0F7B2 /* View */,
 				EFB0FDE7237EA572005EEDE2 /* Model */,
 				EF072676237C163100384D3E /* Controller */,
 				EFB0FDFC2382CBCB005EEDE2 /* Extension */,
@@ -181,12 +185,27 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		EF8499D1239627CD00A0F7B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF8AF7C823992C8B00DEA81F /* MainViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF8AF7CA239938B000DEA81F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EFB0FDEB237EA65F005EEDE2 /* Request */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		EFB0FDE7237EA572005EEDE2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				EFB0FDEA237EA64B005EEDE2 /* Navigation */,
 				EFB0FDF0237EA6AB005EEDE2 /* Location */,
-				EFB0FDEB237EA65F005EEDE2 /* Request */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -490,6 +509,7 @@
 				EFB0FDF2237EA6B7005EEDE2 /* LocationData.swift in Sources */,
 				EF072645237C12AC00384D3E /* AppDelegate.swift in Sources */,
 				EFB0FDE9237EA595005EEDE2 /* Driving.swift in Sources */,
+				EF8AF7C923992C8B00DEA81F /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

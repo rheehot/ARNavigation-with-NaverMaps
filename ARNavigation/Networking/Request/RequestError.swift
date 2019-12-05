@@ -8,7 +8,6 @@
 
 import Foundation
 
-// Request Error 관련 열거형 타입
 enum RequestError: Error {
     case networkConnection
     case networkDelay
