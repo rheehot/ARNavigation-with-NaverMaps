@@ -35,13 +35,13 @@ class MainViewModel {
             let goal = nmMarker.last?.position else {
                 return
         }
-        let data = NavigationData(start, goal)
-        apiRequest.request(data) { [weak self] (isSuccess, data, error) in
+        let navigationData = NavigationData(start, goal)
+        apiRequest.request(navigationData) { [weak self] (isSuccess, data, error) in
             self?.isLoading = false
             if isSuccess {
-                // self?.makePathOverlay()
+                guard let driving = data as? Driving  else { return }
+                self?.makePoints(driving.route?.trafast?.first?.path)
                 print("성공")
-                
             } else {
                 print("실패")
                 print(error?.localizedDescription as Any)
@@ -74,5 +74,4 @@ class MainViewModel {
         })
     }
     
-     
 }

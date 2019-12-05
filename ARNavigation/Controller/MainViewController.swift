@@ -13,11 +13,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var naverMapView: NMFNaverMapView!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var lngLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
     private var nmMarker = [NMFMarker]()
     private var nmPath: NMFPath?
-    private var mainViewModel = MainViewModel()
+    lazy var mainViewModel: MainViewModel = {
+        return MainViewModel()
+    }()
     
     // MARK:- Properties
     private var authState: NMFAuthState!
@@ -30,11 +33,13 @@ class MainViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func tappedNaviButton(_ sender: UIButton) {
-        mainViewModel.requestFetchData()
+        DispatchQueue.main.async {
+            self.mainViewModel.requestFetchData()
+        }
     }
     
     @IBAction func tappedARNaviButton(_ sender: UIButton) {
-
+        
     }
     
     private func makePathOverlay() {
@@ -51,6 +56,26 @@ class MainViewController: UIViewController {
         naverMapView.showLocationButton = true
         naverMapView.showIndoorLevelPicker = true
     }
+    
+    private func initializeViewModel() {
+        mainViewModel.updateLoadingStatus = { [weak self] in
+            DispatchQueue.main.async {
+                let isLoading = self?.mainViewModel.isLoading ?? false
+                if isLoading {
+                    self?.activityIndicator.startAnimating()
+                    UIView.animate(withDuration: 0.2, animations: {
+                        // Naver Map indicatior animating
+                    })
+                }else{
+                    self?.activityIndicator.stopAnimating()
+                    UIView.animate(withDuration: 0.2, animations: {
+                        // Naver Map indicatior animating
+                    })
+                }
+            }
+        }
+    }
+    
 }
 
 // MARK: - NMFMapViewDelegate

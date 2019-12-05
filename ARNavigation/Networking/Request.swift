@@ -25,7 +25,7 @@ class Request: RequestProtocol {
     
     private func initClientKey() {
         guard let id = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientId) as? String,
-              let secret = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientSecret) as? String else {
+            let secret = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientSecret) as? String else {
                 return
         }
         self.clientId = id
@@ -73,7 +73,6 @@ class Request: RequestProtocol {
             let decoder = JSONDecoder()
             do {
                 let driving = try decoder.decode(Driving.self, from: data)
-                self.makePoints(driving.route?.trafast?.first?.path)
                 completion(true, driving, nil)
             } catch {
                 print("error trying to convert data to JSON")

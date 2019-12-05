@@ -75,10 +75,10 @@
 		EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NMGLatLng+Extension.swift"; sourceTree = "<group>"; };
 		EF8AF7C823992C8B00DEA81F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EFB0FDE8237EA595005EEDE2 /* Driving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Driving.swift; path = ARNavigation/Model/Navigation/Driving.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDEC237EA672005EEDE2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Request.swift; path = ARNavigation/Networking/Request/Request.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDEC237EA672005EEDE2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Request.swift; path = ARNavigation/Networking/Request.swift; sourceTree = SOURCE_ROOT; };
 		EFB0FDEE237EA67D005EEDE2 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationData.swift; path = ARNavigation/Model/Location/LocationData.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDF3237EA7F2005EEDE2 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestError.swift; path = ARNavigation/Networking/Request/RequestError.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDF3237EA7F2005EEDE2 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestError.swift; path = ARNavigation/Networking/RequestError.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +196,9 @@
 		EF8AF7CA239938B000DEA81F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				EFB0FDEB237EA65F005EEDE2 /* Request */,
+				EFB0FDEC237EA672005EEDE2 /* Request.swift */,
+				EFB0FDEE237EA67D005EEDE2 /* RequestProtocol.swift */,
+				EFB0FDF3237EA7F2005EEDE2 /* RequestError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -216,16 +218,6 @@
 				EFB0FDE8237EA595005EEDE2 /* Driving.swift */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		EFB0FDEB237EA65F005EEDE2 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				EFB0FDEC237EA672005EEDE2 /* Request.swift */,
-				EFB0FDEE237EA67D005EEDE2 /* RequestProtocol.swift */,
-				EFB0FDF3237EA7F2005EEDE2 /* RequestError.swift */,
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		EFB0FDF0237EA6AB005EEDE2 /* Location */ = {
