@@ -35,6 +35,7 @@ class MainViewController: UIViewController {
     @IBAction func tappedNaviButton(_ sender: UIButton) {
         DispatchQueue.main.async {
             self.mainViewModel.requestFetchData()
+            self.mainViewModel.processFetchPath(naverMapView: self.naverMapView.mapView)
         }
     }
     
@@ -82,26 +83,7 @@ class MainViewController: UIViewController {
 extension MainViewController: NMFMapViewDelegate {
     func didTapMapView(_ point: CGPoint, latLng latlng: NMGLatLng) {
         print("\(latlng.lat), \(latlng.lng)")
-        
-        if self.nmMarker.count == 2 {
-            resetMapMarker()
-            return
-        }
-        self.addMarker(with: latlng)
-    }
-    
-    private func addMarker(with latLng: NMGLatLng) {
-        let marker = NMFMarker()
-        marker.position = NMGLatLng(lat: latLng.lat, lng: latLng.lng)
-        nmMarker.append(marker)
-        marker.mapView = naverMapView.mapView
-    }
-    
-    private func resetMapMarker() {
-        nmMarker.forEach { $0.mapView = nil }
-        nmMarker.removeAll()
-        self.mainViewModel.removeAllPoints()
-        nmPath?.mapView = nil
+        self.mainViewModel.processFetchMarker(with: latlng, mapView: self.naverMapView.mapView)
     }
 }
 

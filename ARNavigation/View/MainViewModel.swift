@@ -49,7 +49,29 @@ class MainViewModel {
         }
     }
     
-    private func processFetchMarker(naverMapView: NMFMapView) {
+    func processFetchMarker(with latlng: NMGLatLng, mapView naverMapView: NMFMapView) {
+        if self.nmMarker.count == 2 {
+            resetMapMarker()
+            return
+        }
+        self.addMarker(with: latlng, mapView: naverMapView)
+    }
+    
+    private func addMarker(with latLng: NMGLatLng, mapView naverMapView: NMFMapView) {
+        let marker = NMFMarker()
+        marker.position = NMGLatLng(lat: latLng.lat, lng: latLng.lng)
+        nmMarker.append(marker)
+        marker.mapView = naverMapView
+    }
+    
+    private func resetMapMarker() {
+        nmMarker.forEach { $0.mapView = nil }
+        nmMarker.removeAll()
+        self.removeAllPoints()
+        nmPath?.mapView = nil
+    }
+    
+    func processFetchPath(naverMapView: NMFMapView) {
         self.nmPath = NMFPath(points: self.getDirectionPoints())
         self.nmPath?.mapView = naverMapView
     }
@@ -61,7 +83,6 @@ class MainViewModel {
     func getDirectionPoints() -> [NMGLatLng] {
         return self.directionPoints
     }
-    
     
     private func makePoints(_ paths: [[Double]]?) {
         paths?.forEach({ (path) in
