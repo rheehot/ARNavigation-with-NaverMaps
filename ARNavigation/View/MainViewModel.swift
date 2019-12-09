@@ -11,7 +11,7 @@ import NMapsMap
 
 
 class MainViewModel {
-    let apiRequest: Request
+    let apiRequest: DirectionRequest
     
     private var nmMarker = [NMFMarker]()
     private var nmPath: NMFPath?
@@ -19,7 +19,7 @@ class MainViewModel {
     
     var updateLoadingStatus: (() -> ())?
     
-    init(apiRequest: Request = Request()) {
+    init(apiRequest: DirectionRequest = DirectionRequest()) {
         self.apiRequest = apiRequest
     }
     

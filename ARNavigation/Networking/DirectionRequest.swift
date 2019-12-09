@@ -1,5 +1,5 @@
 //
-//  Request.swift
+//  DirectionRequest.swift
 //  ARNavigation
 //
 //  Created by youngjun goo on 2019/11/15.
@@ -9,16 +9,7 @@
 import Foundation
 import NMapsMap
 
-struct Constants {
-    static let NMFClientId: String = "NMFClientId"
-    static let NMFClientSecret: String = "NMFClientSecret"
-    static let baseURL: String = "https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving"
-    static let clientIdHeader: String = "X-NCP-APIGW-API-KEY-ID"
-    static let clientSecretHeader: String = "X-NCP-APIGW-API-KEY"
-    static let trafast: String = "trafast"
-}
-
-class Request: RequestProtocol {
+class DirectionRequest: RequestProtocol {
     
     private var clientId: String = ""
     private var clientSecret: String = ""
@@ -34,7 +25,7 @@ class Request: RequestProtocol {
     
     func createURLRequest(_ start: String, _ goal: String) -> URLRequest {
         self.initClientKey()
-        var urlComponents = URLComponents(string: Constants.baseURL)
+        var urlComponents = URLComponents(string: Constants.NMbaseURL)
         let start = start
         let goal = goal
         let parameter: [String: String] = [
@@ -50,8 +41,8 @@ class Request: RequestProtocol {
         }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.setValue(self.clientId, forHTTPHeaderField: Constants.clientIdHeader)
-        request.setValue(self.clientSecret, forHTTPHeaderField: Constants.clientSecretHeader)
+        request.setValue(self.clientId, forHTTPHeaderField: Constants.NMClientIdHeader)
+        request.setValue(self.clientSecret, forHTTPHeaderField: Constants.NMClientSecretHeader)
         
         return request
     }
@@ -81,3 +72,5 @@ class Request: RequestProtocol {
         }.resume()
     }
 }
+
+

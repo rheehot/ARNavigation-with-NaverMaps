@@ -14,6 +14,10 @@
 	<string>5uzsyz7j68</string>
 	<key>NMFClientSecret</key>
 	<string>3HHMP9lRHmBhrJAMrMB3EAFMyOCl6VFpAsquN8gJ</string>
+	<key>NSLClientId</key>
+	<string>yw_aOVOusY_0UXyNJOLe</string>
+	<key>NSLClientSecret</key>
+	<string>rl0fIllHFk</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
