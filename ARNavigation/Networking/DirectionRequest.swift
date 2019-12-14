@@ -23,9 +23,7 @@ class DirectionRequest: RequestProtocol {
         self.clientSecret = secret
     }
     
-    func createURLRequest(_ start: String, _ goal: String) -> URLRequest {
-        self.initClientKey()
-        var urlComponents = URLComponents(string: Constants.NMbaseURL)
+    private func getDirectionURLParameter(_ start: String, _ goal: String) -> [String: String] {
         let start = start
         let goal = goal
         let parameter: [String: String] = [
@@ -33,6 +31,13 @@ class DirectionRequest: RequestProtocol {
             "goal": goal,
             "option": Constants.trafast
         ]
+        return parameter
+    }
+    
+    func createURLRequest(with parameter: [String: String]) -> URLRequest {
+        self.initClientKey()
+        var urlComponents = URLComponents(string: Constants.NMbaseURL)
+
         urlComponents?.queryItems = parameter.map{ (key, value) in
             URLQueryItem(name: key, value: value)
         }
@@ -50,7 +55,7 @@ class DirectionRequest: RequestProtocol {
     func request(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
         let start = data.startLocation.convertString
         let goal = data.goalLocation.convertString
-        let request = createURLRequest(start, goal)
+        let request = createURLRequest(with: getDirectionURLParameter(start, goal))
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil else {
                 completion(false, nil, RequestError.requestFailed)

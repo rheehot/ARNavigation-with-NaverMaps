@@ -21,10 +21,29 @@ class SearchRequest: RequestProtocol {
         self.clientSecret = secret
     }
     
-    func createURLRequest(_ start: String, _ goal: String) -> URLRequest {
-        self.initClientKey()
-        var urlComponents = URLComponents(string: Constants.NSLbaseURL )
+    private getSearchURLParameter() -> [String: String] {
         
+    }
+    
+    func createURLRequest(with parameter: [String : String]) -> URLRequest {
+        self.initClientKey()
+        var urlComponents = URLComponents(string: Constants.NSLbaseURL)
+        
+        urlComponents?.queryItems = parameter.map{ (key, value) in
+            URLQueryItem(name: key, value: value)
+        }
+        guard let url = urlComponents?.url else {
+            return URLRequest(url: URL(string: "")!)
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue(self.clientId, forHTTPHeaderField: Constants.NSLClientIdHeader)
+        request.setValue(self.clientSecret, forHTTPHeaderField: Constants.NSLClientSecretHeader)
+        return request
+    }
+    
+    func request(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
+        <#code#>
     }
     
 }
