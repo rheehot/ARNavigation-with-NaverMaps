@@ -9,7 +9,12 @@
 import Foundation
 import NMapsMap
 
-class DirectionRequest: RequestProtocol {
+
+class NaverAPIService: NaverAPIServiceType {
+    func requestSearchLocation(_ locationName: String, completion: @escaping requestCompletionHandler) {
+        <#code#>
+    }
+    
     
     private var clientId: String = ""
     private var clientSecret: String = ""
@@ -52,7 +57,7 @@ class DirectionRequest: RequestProtocol {
         return request
     }
     
-    func request(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
+    func requestNavigation(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
         let start = data.startLocation.convertString
         let goal = data.goalLocation.convertString
         let request = createURLRequest(with: getDirectionURLParameter(start, goal))

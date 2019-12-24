@@ -23,3 +23,4 @@ struct Constants {
     static let NMClientSecretHeader: String = "X-NCP-APIGW-API-KEY"
     static let trafast: String = "trafast"
 }
+

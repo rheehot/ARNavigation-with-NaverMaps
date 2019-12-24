@@ -8,6 +8,8 @@
 
 import Foundation
 import NMapsMap
+import RxSwift
+import RxCocoa
 
 
 class MainViewModel {

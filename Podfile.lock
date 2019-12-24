@@ -1,20 +1,34 @@
 PODS:
   - NMapsMap (3.6.0)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
   - SwiftLint (0.37.0)
 
 DEPENDENCIES:
   - NMapsMap
+  - RxCocoa
+  - RxSwift
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - NMapsMap
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
   NMapsMap: be525094041c1ba7ab5035c9b3215c797a2bbb13
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SwiftLint: c078a14d7d7ade75e5507795d185e3da41d844d2
 
-PODFILE CHECKSUM: b9c5430fc94b8d26d52f23dbddbda953f5774519
+PODFILE CHECKSUM: 5067d16c6f9215d0174377d5a4de2731e35f6d49
 
 COCOAPODS: 1.8.4
