@@ -12,13 +12,13 @@ import NMapsMap
 
 class NaverAPIService: NaverAPIServiceType {
     func requestSearchLocation(_ locationName: String, completion: @escaping requestCompletionHandler) {
-        <#code#>
+       
     }
-    
-    
+
+
     private var clientId: String = ""
     private var clientSecret: String = ""
-    
+
     private func initClientKey() {
         guard let id = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientId) as? String,
             let secret = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientSecret) as? String else {
@@ -27,7 +27,7 @@ class NaverAPIService: NaverAPIServiceType {
         self.clientId = id
         self.clientSecret = secret
     }
-    
+
     private func getDirectionURLParameter(_ start: String, _ goal: String) -> [String: String] {
         let start = start
         let goal = goal
@@ -38,13 +38,12 @@ class NaverAPIService: NaverAPIServiceType {
         ]
         return parameter
     }
-    
+
     func createURLRequest(with parameter: [String: String]) -> URLRequest {
         self.initClientKey()
         var urlComponents = URLComponents(string: Constants.NMbaseURL)
 
-        urlComponents?.queryItems = parameter.map{ (key, value) in
-            URLQueryItem(name: key, value: value)
+        urlComponents?.queryItems = parameter.map{ URLQueryItem(name: $0.key, value: <#T##String?#>)
         }
         guard let url = urlComponents?.url else {
             return URLRequest(url: URL(string: "")!)
@@ -53,10 +52,10 @@ class NaverAPIService: NaverAPIServiceType {
         request.httpMethod = "GET"
         request.setValue(self.clientId, forHTTPHeaderField: Constants.NMClientIdHeader)
         request.setValue(self.clientSecret, forHTTPHeaderField: Constants.NMClientSecretHeader)
-        
+
         return request
     }
-    
+
     func requestNavigation(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
         let start = data.startLocation.convertString
         let goal = data.goalLocation.convertString
@@ -70,7 +69,7 @@ class NaverAPIService: NaverAPIServiceType {
                 completion(false, nil, RequestError.requestFailed)
                 return
             }
-            
+
             let decoder = JSONDecoder()
             do {
                 let driving = try decoder.decode(Driving.self, from: data)

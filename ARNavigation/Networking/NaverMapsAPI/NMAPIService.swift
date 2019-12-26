@@ -15,10 +15,10 @@ protocol NMAPIServiceType {
 }
 
 final class DrivingAPIService: NMAPIServiceType {
-    private let networkManager: NetworkManagerType
+    private let apiService: APIService
     
-    init(networkManager: NetworkingManager) {
-        <#statements#>
+    init(apiService: APIService = APIService()) {
+        self.apiService = apiService
     }
     
     func requestDirivingAPI(navigationData: NavigationData) -> Observable<Driving> {

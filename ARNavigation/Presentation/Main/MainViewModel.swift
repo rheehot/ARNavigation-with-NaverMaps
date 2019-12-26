@@ -13,7 +13,7 @@ import RxCocoa
 
 
 class MainViewModel {
-    let apiRequest: DirectionRequest
+    let apiService: APIService
     
     private var nmMarker = [NMFMarker]()
     private var nmPath: NMFPath?
@@ -21,8 +21,8 @@ class MainViewModel {
     
     var updateLoadingStatus: (() -> ())?
     
-    init(apiRequest: DirectionRequest = DirectionRequest()) {
-        self.apiRequest = apiRequest
+    init(apiService: APIService = APIService()) {
+        self.apiService = apiService
     }
     
     var isLoading: Bool = false {
@@ -38,7 +38,8 @@ class MainViewModel {
                 return
         }
         let navigationData = NavigationData(start, goal)
-        apiRequest.request(navigationData) { [weak self] (isSuccess, data, error) in
+        apiService.get(apiReqeust: <#T##APIRequest#>)
+        apiService.request(navigationData) { [weak self] (isSuccess, data, error) in
             self?.isLoading = false
             if isSuccess {
                 guard let driving = data as? Driving  else { return }

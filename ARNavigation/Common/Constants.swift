@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Constants {
+struct NaverAPI {
     // Naver Search
     static let NSLClientId: String = "NSLClientId"
     static let NSLClientSecret: String = "NSLClientSecret"
