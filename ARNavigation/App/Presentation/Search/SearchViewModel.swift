@@ -16,6 +16,4 @@ final class SearchViewModel {
     let selectedIndexSubject = PublishSubject<IndexPath>()
     let searchQuerySubject = BehaviorSubject(value: "")
     
-    
-    
 }

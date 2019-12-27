@@ -10,12 +10,12 @@ import Foundation
 import NMapsMap
 
 struct LocationData {
-    var locationName: String?
-    var latitude: Double?
-    var longitude: Double?
+    var locationName: String
+    var curLocation: NMGLatLng
 }
 
 struct NavigationData {
+    var locationData: LocationData?
     var startLocation: NMGLatLng
     var goalLocation: NMGLatLng
     

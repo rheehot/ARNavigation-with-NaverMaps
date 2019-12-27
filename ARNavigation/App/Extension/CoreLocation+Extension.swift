@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import NMapsMap
 
 extension CLLocationManagerDelegate {
     
@@ -15,10 +16,8 @@ extension CLLocationManagerDelegate {
     private func createCurrentLocationData(_ location: CLLocation, placemark: CLPlacemark) -> LocationData? {
         if let locality = placemark.locality , let subLocality = placemark.subLocality {
             let locationName = locality + " " + subLocality
-            var currentLocationData = LocationData()
-            currentLocationData.locationName = locationName
-            currentLocationData.latitude = location.coordinate.latitude
-            currentLocationData.longitude = location.coordinate.longitude
+            let curLocation =  NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
+            var currentLocationData = LocationData(locationName: locationName, curLocation: curLocation)
             return currentLocationData
         } else {
             print("현재 위치 데이터 생성 실패")
