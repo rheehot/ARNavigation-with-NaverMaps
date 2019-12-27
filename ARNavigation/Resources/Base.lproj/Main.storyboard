@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NMViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,15 +44,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-eO-FYw">
                                 <rect key="frame" x="355" y="700" width="39" height="30"/>
                                 <state key="normal" title="길찾기"/>
-                                <connections>
-                                    <action selector="tappedNaviButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9b0-kg-S0a"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-lR-2Yy">
                                 <rect key="frame" x="331" y="738" width="63" height="30"/>
                                 <state key="normal" title="AR 길안내"/>
                                 <connections>
-                                    <action selector="tappedARNaviButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCA-J5-xow"/>
                                     <segue destination="5wj-fi-5Wd" kind="show" id="zVM-UO-eKw"/>
                                 </connections>
                             </button>
@@ -91,12 +87,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="latLabel" destination="6TA-GC-2uH" id="dKm-jS-PHE"/>
-                        <outlet property="lngLabel" destination="AkR-2S-7NS" id="x5J-Nb-NEb"/>
-                        <outlet property="naverMapView" destination="CtG-ul-vD2" id="GlC-nN-f7m"/>
-                        <outlet property="searchBarView" destination="lxX-6H-I5X" id="l7v-ws-1lk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

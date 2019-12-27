@@ -11,7 +11,6 @@
 		C6C3EDC279A0F8FC45D54FD2 /* Pods_ARNavigation_ARNavigationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C81192D62BAB0BFD267BA1C /* Pods_ARNavigation_ARNavigationUITests.framework */; };
 		DF8D8189B0845855A45DAA0B /* Pods_ARNavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AF9354C93F718C18E2809D /* Pods_ARNavigationTests.framework */; };
 		EF072645237C12AC00384D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072644237C12AC00384D3E /* AppDelegate.swift */; };
-		EF072649237C12AC00384D3E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072648237C12AC00384D3E /* MainViewController.swift */; };
 		EF07264C237C12AC00384D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF07264A237C12AC00384D3E /* Main.storyboard */; };
 		EF07264E237C12AF00384D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF07264D237C12AF00384D3E /* Assets.xcassets */; };
 		EF072651237C12AF00384D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF07264F237C12AF00384D3E /* LaunchScreen.storyboard */; };
@@ -22,19 +21,14 @@
 		EF8499BD238D519A00A0F7B2 /* NMGLatLng+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */; };
 		EF89329823B44D3500CFBCDA /* NMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329723B44D3500CFBCDA /* NMModel.swift */; };
 		EF89329B23B4524E00CFBCDA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329A23B4524E00CFBCDA /* Search.swift */; };
-		EF8AF7C923992C8B00DEA81F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AF7C823992C8B00DEA81F /* MainViewModel.swift */; };
 		EF9492C223B1AB920017A640 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C123B1AB920017A640 /* SearchViewController.swift */; };
 		EF9492C423B1AD810017A640 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C323B1AD810017A640 /* SearchViewModel.swift */; };
-		EF9492C823B1B2360017A640 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C723B1B2360017A640 /* APIRequest.swift */; };
 		EF9492CA23B1B6690017A640 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C923B1B6690017A640 /* HTTPMethod.swift */; };
-		EF9492CE23B1BE450017A640 /* TargetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492CD23B1BE450017A640 /* TargetAPI.swift */; };
-		EF9492D023B1D5CE0017A640 /* NMAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492CF23B1D5CE0017A640 /* NMAPIService.swift */; };
 		EF9492D523B1D7020017A640 /* NavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492D423B1D7020017A640 /* NavigationType.swift */; };
 		EF9492D723B1F4110017A640 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492D623B1F4110017A640 /* APIService.swift */; };
 		EF9492D923B2047C0017A640 /* NMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492D823B2047C0017A640 /* NMViewModel.swift */; };
 		EF9492DB23B206230017A640 /* NMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492DA23B206230017A640 /* NMViewController.swift */; };
 		EFB0FDE9237EA595005EEDE2 /* Driving.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDE8237EA595005EEDE2 /* Driving.swift */; };
-		EFB0FDED237EA672005EEDE2 /* DirectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDEC237EA672005EEDE2 /* DirectionRequest.swift */; };
 		EFB0FDF2237EA6B7005EEDE2 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */; };
 		EFB0FDF4237EA7F2005EEDE2 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDF3237EA7F2005EEDE2 /* NetworkError.swift */; };
 		EFB87A24239D2C96007458E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87A23239D2C96007458E3 /* Constants.swift */; };
@@ -71,7 +65,6 @@
 		C621A669EEFD6606E9467466 /* Pods-ARNavigationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNavigationUITests.release.xcconfig"; path = "Target Support Files/Pods-ARNavigationUITests/Pods-ARNavigationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF072641237C12AC00384D3E /* ARNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF072644237C12AC00384D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF072648237C12AC00384D3E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ARNavigation/Presentation/Main/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		EF07264B237C12AC00384D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF07264D237C12AF00384D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF072650237C12AF00384D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,21 +80,16 @@
 		EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NMGLatLng+Extension.swift"; sourceTree = "<group>"; };
 		EF89329723B44D3500CFBCDA /* NMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMModel.swift; sourceTree = "<group>"; };
 		EF89329A23B4524E00CFBCDA /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		EF8AF7C823992C8B00DEA81F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EF9492C123B1AB920017A640 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EF9492C323B1AD810017A640 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		EF9492C723B1B2360017A640 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		EF9492C923B1B6690017A640 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		EF9492CD23B1BE450017A640 /* TargetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetAPI.swift; sourceTree = "<group>"; };
-		EF9492CF23B1D5CE0017A640 /* NMAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMAPIService.swift; sourceTree = "<group>"; };
 		EF9492D423B1D7020017A640 /* NavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationType.swift; sourceTree = "<group>"; };
 		EF9492D623B1F4110017A640 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		EF9492D823B2047C0017A640 /* NMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMViewModel.swift; sourceTree = "<group>"; };
 		EF9492DA23B206230017A640 /* NMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMViewController.swift; sourceTree = "<group>"; };
-		EFB0FDE8237EA595005EEDE2 /* Driving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Driving.swift; path = ARNavigation/Model/Navigation/Driving.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDEC237EA672005EEDE2 /* DirectionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DirectionRequest.swift; path = ARNavigation/Networking/DirectionRequest.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationData.swift; path = ARNavigation/Model/Location/LocationData.swift; sourceTree = SOURCE_ROOT; };
-		EFB0FDF3237EA7F2005EEDE2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkError.swift; path = ARNavigation/Networking/NetworkError.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDE8237EA595005EEDE2 /* Driving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Driving.swift; path = ARNavigation/App/Model/Navigation/Driving.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationData.swift; path = ARNavigation/App/Model/Location/LocationData.swift; sourceTree = SOURCE_ROOT; };
+		EFB0FDF3237EA7F2005EEDE2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkError.swift; path = ARNavigation/App/Networking/NetworkError.swift; sourceTree = SOURCE_ROOT; };
 		EFB87A23239D2C96007458E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,17 +156,9 @@
 		EF072643237C12AC00384D3E /* ARNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				EF9492D323B1D6D90017A640 /* Common */,
-				EF8AF7CA239938B000DEA81F /* Networking */,
-				EF8499D1239627CD00A0F7B2 /* Presentation */,
-				EFB0FDE7237EA572005EEDE2 /* Model */,
-				EF072676237C163100384D3E /* Controller */,
-				EFB0FDFC2382CBCB005EEDE2 /* Extension */,
-				EF072644237C12AC00384D3E /* AppDelegate.swift */,
-				EF07264A237C12AC00384D3E /* Main.storyboard */,
-				EF07264D237C12AF00384D3E /* Assets.xcassets */,
-				EF07264F237C12AF00384D3E /* LaunchScreen.storyboard */,
 				EF072652237C12AF00384D3E /* Info.plist */,
+				EF8B025823B5A69100E630DC /* Resources */,
+				EF8B025A23B5A6B600E630DC /* App */,
 			);
 			path = ARNavigation;
 			sourceTree = "<group>";
@@ -214,7 +194,6 @@
 			children = (
 				EF89329623B44CDE00CFBCDA /* NMView */,
 				EFDB695423AA624E00F5BD90 /* Search */,
-				EFDB695323AA622D00F5BD90 /* Main */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -240,29 +219,41 @@
 		EF8AF7CA239938B000DEA81F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				EFB0FDEC237EA672005EEDE2 /* DirectionRequest.swift */,
 				EFB0FDF3237EA7F2005EEDE2 /* NetworkError.swift */,
 				EF9492C923B1B6690017A640 /* HTTPMethod.swift */,
 				EF9492D223B1D6340017A640 /* NetworkManager */,
-				EF9492D123B1D6130017A640 /* NaverMapsAPI */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		EF9492D123B1D6130017A640 /* NaverMapsAPI */ = {
+		EF8B025823B5A69100E630DC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EF9492CF23B1D5CE0017A640 /* NMAPIService.swift */,
+				EF07264A237C12AC00384D3E /* Main.storyboard */,
+				EF07264D237C12AF00384D3E /* Assets.xcassets */,
+				EF07264F237C12AF00384D3E /* LaunchScreen.storyboard */,
 			);
-			path = NaverMapsAPI;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF8B025A23B5A6B600E630DC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF072644237C12AC00384D3E /* AppDelegate.swift */,
+				EF9492D323B1D6D90017A640 /* Common */,
+				EF8AF7CA239938B000DEA81F /* Networking */,
+				EF8499D1239627CD00A0F7B2 /* Presentation */,
+				EFB0FDE7237EA572005EEDE2 /* Model */,
+				EF072676237C163100384D3E /* Controller */,
+				EFB0FDFC2382CBCB005EEDE2 /* Extension */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		EF9492D223B1D6340017A640 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				EF9492C723B1B2360017A640 /* APIRequest.swift */,
 				EF9492D623B1F4110017A640 /* APIService.swift */,
-				EF9492CD23B1BE450017A640 /* TargetAPI.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -309,15 +300,6 @@
 				EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		EFDB695323AA622D00F5BD90 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				EF072648237C12AC00384D3E /* MainViewController.swift */,
-				EF8AF7C823992C8B00DEA81F /* MainViewModel.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		EFDB695423AA624E00F5BD90 /* Search */ = {
@@ -589,23 +571,17 @@
 				EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */,
 				EF89329823B44D3500CFBCDA /* NMModel.swift in Sources */,
 				EFB0FDF4237EA7F2005EEDE2 /* NetworkError.swift in Sources */,
-				EF9492C823B1B2360017A640 /* APIRequest.swift in Sources */,
 				EF9492D523B1D7020017A640 /* NavigationType.swift in Sources */,
 				EF9492D923B2047C0017A640 /* NMViewModel.swift in Sources */,
 				EF072675237C162B00384D3E /* ARViewController.swift in Sources */,
 				EF9492C423B1AD810017A640 /* SearchViewModel.swift in Sources */,
 				EF9492DB23B206230017A640 /* NMViewController.swift in Sources */,
-				EF072649237C12AC00384D3E /* MainViewController.swift in Sources */,
-				EFB0FDED237EA672005EEDE2 /* DirectionRequest.swift in Sources */,
 				EF9492C223B1AB920017A640 /* SearchViewController.swift in Sources */,
 				EF89329B23B4524E00CFBCDA /* Search.swift in Sources */,
 				EFB0FDF2237EA6B7005EEDE2 /* LocationData.swift in Sources */,
 				EF9492CA23B1B6690017A640 /* HTTPMethod.swift in Sources */,
 				EF072645237C12AC00384D3E /* AppDelegate.swift in Sources */,
 				EFB0FDE9237EA595005EEDE2 /* Driving.swift in Sources */,
-				EF9492D023B1D5CE0017A640 /* NMAPIService.swift in Sources */,
-				EF8AF7C923992C8B00DEA81F /* MainViewModel.swift in Sources */,
-				EF9492CE23B1BE450017A640 /* TargetAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
