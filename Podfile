@@ -8,6 +8,8 @@ target 'ARNavigation' do
   # Pods for ARNavigation
     pod 'NMapsMap'
     pod 'SwiftLint'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 
   target 'ARNavigationTests' do
     inherit! :search_paths

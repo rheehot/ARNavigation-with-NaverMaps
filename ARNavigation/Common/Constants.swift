@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Constants {
+struct NaverAPI {
     // Naver Search
     static let NSLClientId: String = "NSLClientId"
     static let NSLClientSecret: String = "NSLClientSecret"
@@ -23,3 +23,4 @@ struct Constants {
     static let NMClientSecretHeader: String = "X-NCP-APIGW-API-KEY"
     static let trafast: String = "trafast"
 }
+

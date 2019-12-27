@@ -9,11 +9,16 @@
 import Foundation
 import NMapsMap
 
-class DirectionRequest: RequestProtocol {
-    
+
+class NaverAPIService: NaverAPIServiceType {
+    func requestSearchLocation(_ locationName: String, completion: @escaping requestCompletionHandler) {
+       
+    }
+
+
     private var clientId: String = ""
     private var clientSecret: String = ""
-    
+
     private func initClientKey() {
         guard let id = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientId) as? String,
             let secret = Bundle.main.object(forInfoDictionaryKey: Constants.NMFClientSecret) as? String else {
@@ -22,7 +27,7 @@ class DirectionRequest: RequestProtocol {
         self.clientId = id
         self.clientSecret = secret
     }
-    
+
     private func getDirectionURLParameter(_ start: String, _ goal: String) -> [String: String] {
         let start = start
         let goal = goal
@@ -33,13 +38,12 @@ class DirectionRequest: RequestProtocol {
         ]
         return parameter
     }
-    
+
     func createURLRequest(with parameter: [String: String]) -> URLRequest {
         self.initClientKey()
         var urlComponents = URLComponents(string: Constants.NMbaseURL)
 
-        urlComponents?.queryItems = parameter.map{ (key, value) in
-            URLQueryItem(name: key, value: value)
+        urlComponents?.queryItems = parameter.map{ URLQueryItem(name: $0.key, value: <#T##String?#>)
         }
         guard let url = urlComponents?.url else {
             return URLRequest(url: URL(string: "")!)
@@ -48,11 +52,11 @@ class DirectionRequest: RequestProtocol {
         request.httpMethod = "GET"
         request.setValue(self.clientId, forHTTPHeaderField: Constants.NMClientIdHeader)
         request.setValue(self.clientSecret, forHTTPHeaderField: Constants.NMClientSecretHeader)
-        
+
         return request
     }
-    
-    func request(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
+
+    func requestNavigation(_ data: NavigationData, completion: @escaping requestCompletionHandler) {
         let start = data.startLocation.convertString
         let goal = data.goalLocation.convertString
         let request = createURLRequest(with: getDirectionURLParameter(start, goal))
@@ -65,7 +69,7 @@ class DirectionRequest: RequestProtocol {
                 completion(false, nil, RequestError.requestFailed)
                 return
             }
-            
+
             let decoder = JSONDecoder()
             do {
                 let driving = try decoder.decode(Driving.self, from: data)

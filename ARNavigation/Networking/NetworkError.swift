@@ -1,5 +1,5 @@
 //
-//  RequestProtocol.swift
+//  NetworkError.swift
 //  ARNavigation
 //
 //  Created by youngjun goo on 2019/11/15.
@@ -8,7 +8,13 @@
 
 import Foundation
 
-extension RequestError: LocalizedError {
+enum NetworkError: Error {
+    case networkConnection
+    case networkDelay
+    case requestFailed
+}
+
+extension NetworkError: LocalizedError {
     var error: String? {
         switch self {
         case .networkConnection:
@@ -20,11 +26,3 @@ extension RequestError: LocalizedError {
         }
     }
 }
-
-typealias requestCompletionHandler = (Bool, Any?, RequestError?) -> Void
-
-protocol RequestProtocol {
-    func createURLRequest(with parameter: [String: String]) -> URLRequest
-    func request(_ data: NavigationData, completion: @escaping requestCompletionHandler)
-}
-

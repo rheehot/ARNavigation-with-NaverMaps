@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -13,29 +13,43 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="길안내 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-8x-QsJ">
-                                <rect key="frame" x="113.5" y="379" width="93" height="21"/>
+                                <rect key="frame" x="160.66666666666666" y="707" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtG-ul-vD2" customClass="NMFNaverMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="362"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxX-6H-I5X">
+                                        <rect key="frame" x="20" y="50" width="374" height="55"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Gul-Rn-lSs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="lxX-6H-I5X" firstAttribute="top" secondItem="CtG-ul-vD2" secondAttribute="top" constant="50" id="leJ-Z8-OAY"/>
+                                    <constraint firstAttribute="trailing" secondItem="lxX-6H-I5X" secondAttribute="trailing" constant="20" symbolic="YES" id="uAd-Bg-Bay"/>
+                                    <constraint firstItem="lxX-6H-I5X" firstAttribute="leading" secondItem="CtG-ul-vD2" secondAttribute="leading" constant="20" symbolic="YES" id="uh1-OZ-aUq"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-eO-FYw">
-                                <rect key="frame" x="261" y="372" width="39" height="30"/>
+                                <rect key="frame" x="355" y="700" width="39" height="30"/>
                                 <state key="normal" title="길찾기"/>
                                 <connections>
                                     <action selector="tappedNaviButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9b0-kg-S0a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-lR-2Yy">
-                                <rect key="frame" x="237" y="410" width="63" height="30"/>
+                                <rect key="frame" x="331" y="738" width="63" height="30"/>
                                 <state key="normal" title="AR 길안내"/>
                                 <connections>
                                     <action selector="tappedARNaviButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCA-J5-xow"/>
@@ -43,13 +57,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-GC-2uH">
-                                <rect key="frame" x="20" y="466" width="35" height="21"/>
+                                <rect key="frame" x="20" y="760" width="129" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-2S-7NS">
-                                <rect key="frame" x="20" y="517" width="35" height="21"/>
+                                <rect key="frame" x="20" y="811" width="129" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,22 +95,23 @@
                         <outlet property="latLabel" destination="6TA-GC-2uH" id="dKm-jS-PHE"/>
                         <outlet property="lngLabel" destination="AkR-2S-7NS" id="x5J-Nb-NEb"/>
                         <outlet property="naverMapView" destination="CtG-ul-vD2" id="GlC-nN-f7m"/>
+                        <outlet property="searchBarView" destination="lxX-6H-I5X" id="l7v-ws-1lk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+            <point key="canvasLocation" x="136.23188405797103" y="114.50892857142857"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2av-e8-sOa">
             <objects>
                 <viewController id="5wj-fi-5Wd" customClass="ARViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uwk-Hh-lDv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwC-kn-ukd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </arscnView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -115,7 +130,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbD-lc-3FK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="116"/>
+            <point key="canvasLocation" x="953" y="-190"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cSV-dh-gVu">
+            <objects>
+                <viewController id="Ohu-JE-n5W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xHT-bp-Wdy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="MNa-IW-Dbc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v87-oy-htH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="510"/>
         </scene>
     </scenes>
 </document>

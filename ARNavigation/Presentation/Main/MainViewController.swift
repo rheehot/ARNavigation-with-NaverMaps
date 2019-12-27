@@ -10,10 +10,12 @@ import NMapsMap
 
 class MainViewController: UIViewController {
     
+    
     @IBOutlet weak var naverMapView: NMFNaverMapView!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var lngLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var searchBarView: UIView!
     
     // MARK: - Properties
     private var nmMarker = [NMFMarker]()
@@ -56,6 +58,7 @@ class MainViewController: UIViewController {
         naverMapView.mapView.zoomLevel = 15
         naverMapView.showLocationButton = true
         naverMapView.showIndoorLevelPicker = true
+        naverMapView.addSubview(self.searchBarView)
     }
     
     private func initializeViewModel() {
