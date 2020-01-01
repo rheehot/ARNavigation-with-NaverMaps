@@ -18,9 +18,11 @@
 		EF072667237C12AF00384D3E /* ARNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072666237C12AF00384D3E /* ARNavigationUITests.swift */; };
 		EF072675237C162B00384D3E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072674237C162B00384D3E /* ARViewController.swift */; };
 		EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */; };
+		EF692C5D23BCD346003C29C6 /* ObservableType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF692C5C23BCD346003C29C6 /* ObservableType+Extension.swift */; };
 		EF8499BD238D519A00A0F7B2 /* NMGLatLng+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */; };
 		EF89329823B44D3500CFBCDA /* NMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329723B44D3500CFBCDA /* NMModel.swift */; };
 		EF89329B23B4524E00CFBCDA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329A23B4524E00CFBCDA /* Search.swift */; };
+		EF8B025C23B5C2D600E630DC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B025B23B5C2D600E630DC /* ViewModelType.swift */; };
 		EF9492C223B1AB920017A640 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C123B1AB920017A640 /* SearchViewController.swift */; };
 		EF9492C423B1AD810017A640 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C323B1AD810017A640 /* SearchViewModel.swift */; };
 		EF9492CA23B1B6690017A640 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C923B1B6690017A640 /* HTTPMethod.swift */; };
@@ -77,9 +79,11 @@
 		EF072668237C12AF00384D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF072674237C162B00384D3E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = ARNavigation/Controller/ARViewController.swift; sourceTree = SOURCE_ROOT; };
 		EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreLocation+Extension.swift"; path = "ARNavigation/Extension/CoreLocation+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		EF692C5C23BCD346003C29C6 /* ObservableType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extension.swift"; sourceTree = "<group>"; };
 		EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NMGLatLng+Extension.swift"; sourceTree = "<group>"; };
 		EF89329723B44D3500CFBCDA /* NMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMModel.swift; sourceTree = "<group>"; };
 		EF89329A23B4524E00CFBCDA /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		EF8B025B23B5C2D600E630DC /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EF9492C123B1AB920017A640 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EF9492C323B1AD810017A640 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EF9492C923B1B6690017A640 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -219,9 +223,9 @@
 		EF8AF7CA239938B000DEA81F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EF9492D623B1F4110017A640 /* APIService.swift */,
 				EFB0FDF3237EA7F2005EEDE2 /* NetworkError.swift */,
 				EF9492C923B1B6690017A640 /* HTTPMethod.swift */,
-				EF9492D223B1D6340017A640 /* NetworkManager */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -250,19 +254,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		EF9492D223B1D6340017A640 /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				EF9492D623B1F4110017A640 /* APIService.swift */,
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
 		EF9492D323B1D6D90017A640 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				EFB87A23239D2C96007458E3 /* Constants.swift */,
 				EF9492D423B1D7020017A640 /* NavigationType.swift */,
+				EF8B025B23B5C2D600E630DC /* ViewModelType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -298,6 +295,7 @@
 			children = (
 				EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */,
 				EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */,
+				EF692C5C23BCD346003C29C6 /* ObservableType+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -573,9 +571,11 @@
 				EFB0FDF4237EA7F2005EEDE2 /* NetworkError.swift in Sources */,
 				EF9492D523B1D7020017A640 /* NavigationType.swift in Sources */,
 				EF9492D923B2047C0017A640 /* NMViewModel.swift in Sources */,
+				EF8B025C23B5C2D600E630DC /* ViewModelType.swift in Sources */,
 				EF072675237C162B00384D3E /* ARViewController.swift in Sources */,
 				EF9492C423B1AD810017A640 /* SearchViewModel.swift in Sources */,
 				EF9492DB23B206230017A640 /* NMViewController.swift in Sources */,
+				EF692C5D23BCD346003C29C6 /* ObservableType+Extension.swift in Sources */,
 				EF9492C223B1AB920017A640 /* SearchViewController.swift in Sources */,
 				EF89329B23B4524E00CFBCDA /* Search.swift in Sources */,
 				EFB0FDF2237EA6B7005EEDE2 /* LocationData.swift in Sources */,

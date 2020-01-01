@@ -7,8 +7,17 @@
 //
 
 import Foundation
+import RxSwift
 
 struct NMModel {
-    let apiService: APIService
+    let apiService: APIServiceProtocol
     
+    init(apiService: APIServiceProtocol = APIService()) {
+        self.apiService = apiService
+    }
+    
+    func getDriving() -> Observable<Result<Driving, NetworkError>> {
+        return apiService.getDriving()
+    }
+
 }

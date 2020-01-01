@@ -10,12 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol NMViewBindable {
-    // input
-    var viewWillAppear: PublishSubject<Void> { get }
-    // output
-}
-
 class NMViewController: UIViewController {
     var disposeBag = DisposeBag()
     
