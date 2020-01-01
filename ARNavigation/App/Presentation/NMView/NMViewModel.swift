@@ -11,13 +11,41 @@ import RxSwift
 import RxCocoa
 import NMapsMap
 
-//class NMViewModel {
-//    
-//    // OutPut
-//    var directionPoints: Signal<[NMGLatLng]>
-//    var nmMarker: Signal<[NMFMarker]>
-//    var nmPath: Signal<NMFPath>
-//    
-//    private let apiService: APIService
-//    
-//}
+protocol NMViewBindable {
+    // View에서 ViewModel로 Input
+    var navigationButtonTapped: PublishSubject<Void> { get }
+    
+    // ViewModel에서  View로 Output
+    var nmMarker: Driver<[NMFMarker]> { get }
+    var nmPath: Driver<NMFPath> { get }
+    var directionPoins: Driver<[NMGLatLng]> { get }
+    var errorMessage: Signal<String> { get }
+}
+
+class NMViewModel: NMViewBindable {
+    
+    let disposeBag = DisposeBag()
+    
+    let navigationButtonTapped = PublishSubject<Void>()
+    
+    let nmMarker: Driver<[NMFMarker]>
+    
+    let nmPath: Driver<NMFPath>
+    
+    let directionPoins: Driver<[NMGLatLng]>
+    
+    let errorMessage: Signal<String>
+    
+    init(model: NMModel = NMModel()) {
+        let pathResult = navigationButtonTapped
+            .flatMapLatest(model.getDriving)
+            .asObservable()
+            .share()
+        
+        let pathValue = pathResult
+
+    }
+    
+    
+}
+
