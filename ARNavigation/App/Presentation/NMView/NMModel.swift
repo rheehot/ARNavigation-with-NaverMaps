@@ -16,8 +16,8 @@ struct NMModel {
         self.apiService = apiService
     }
     
-    func getDriving() -> Observable<Result<Driving, NetworkError>> {
-        return apiService.getDriving()
+    func getDriving(data: NavigationData) -> Observable<Result<Driving, NetworkError>> {
+        return apiService.getDriving(data: data)
     }
 
 }

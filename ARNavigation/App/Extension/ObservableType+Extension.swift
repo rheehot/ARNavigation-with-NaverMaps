@@ -34,7 +34,7 @@ extension Observable where Element: OptionalType {
 }
 
 extension ObservableType {
-    func filterNilValue<Value>(_ transform: @escaping (E) -> Value?) -> Observable<Value> {
+    func filterNilValue<Value>(_ transform: @escaping (Element) -> Value?) -> Observable<Value> {
         return map(transform).filterNil()
     }
 }
