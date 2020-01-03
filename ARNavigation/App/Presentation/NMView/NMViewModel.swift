@@ -14,6 +14,7 @@ import NMapsMap
 protocol NMViewBindable {
     // View에서 ViewModel로 Input
     var navigationButtonTapped: PublishSubject<Void> { get }
+    var naverMapViewTapped: PublishSubject<Void> { get }
     
     // ViewModel에서  View로 Output
     var nmMarker: Driver<[NMFMarker]> { get }
@@ -23,17 +24,14 @@ protocol NMViewBindable {
 }
 
 class NMViewModel: NMViewBindable {
-    
     let disposeBag = DisposeBag()
     
     let navigationButtonTapped = PublishSubject<Void>()
+    let naverMapViewTapped = PublishSubject<Void>()
     
     let nmMarker: Driver<[NMFMarker]>
-    
     let nmPath: Driver<NMFPath>
-    
     let directionPoins: Driver<[NMGLatLng]>
-    
     let errorMessage: Signal<String>
     
     init(model: NMModel = NMModel()) {

@@ -87,6 +87,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="latLabel" destination="6TA-GC-2uH" id="NZd-6U-zfL"/>
+                        <outlet property="lngLabel" destination="AkR-2S-7NS" id="88V-kt-Jcg"/>
+                        <outlet property="naverMapView" destination="CtG-ul-vD2" id="Q6Q-fF-uc5"/>
+                        <outlet property="navigationButton" destination="AU2-eO-FYw" id="xeX-YJ-col"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

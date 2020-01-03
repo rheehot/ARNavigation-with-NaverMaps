@@ -20,9 +20,12 @@
 		EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */; };
 		EF692C5D23BCD346003C29C6 /* ObservableType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF692C5C23BCD346003C29C6 /* ObservableType+Extension.swift */; };
 		EF8499BD238D519A00A0F7B2 /* NMGLatLng+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */; };
+		EF8930B123BD7D3C00BD4B5A /* MVVM+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8930B023BD7D3C00BD4B5A /* MVVM+ViewController.swift */; };
+		EF8930B323BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8930B223BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift */; };
 		EF89329823B44D3500CFBCDA /* NMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329723B44D3500CFBCDA /* NMModel.swift */; };
 		EF89329B23B4524E00CFBCDA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329A23B4524E00CFBCDA /* Search.swift */; };
 		EF8B025C23B5C2D600E630DC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B025B23B5C2D600E630DC /* ViewModelType.swift */; };
+		EF8E1FB423BECE9E009071FA /* RxCoreLocationDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E1FB323BECE9E009071FA /* RxCoreLocationDelegateProxy.swift */; };
 		EF9492C223B1AB920017A640 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C123B1AB920017A640 /* SearchViewController.swift */; };
 		EF9492C423B1AD810017A640 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C323B1AD810017A640 /* SearchViewModel.swift */; };
 		EF9492CA23B1B6690017A640 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C923B1B6690017A640 /* HTTPMethod.swift */; };
@@ -77,13 +80,16 @@
 		EF072662237C12AF00384D3E /* ARNavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARNavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF072666237C12AF00384D3E /* ARNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNavigationUITests.swift; sourceTree = "<group>"; };
 		EF072668237C12AF00384D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF072674237C162B00384D3E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = ARNavigation/Controller/ARViewController.swift; sourceTree = SOURCE_ROOT; };
-		EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreLocation+Extension.swift"; path = "ARNavigation/Extension/CoreLocation+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		EF072674237C162B00384D3E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = ARNavigation/App/Controller/ARViewController.swift; sourceTree = SOURCE_ROOT; };
+		EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreLocation+Extension.swift"; path = "ARNavigation/App/Extension/CoreLocation+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		EF692C5C23BCD346003C29C6 /* ObservableType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extension.swift"; sourceTree = "<group>"; };
 		EF8499BC238D519A00A0F7B2 /* NMGLatLng+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NMGLatLng+Extension.swift"; sourceTree = "<group>"; };
+		EF8930B023BD7D3C00BD4B5A /* MVVM+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVVM+ViewController.swift"; sourceTree = "<group>"; };
+		EF8930B223BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNaverMapsDelegateProxy.swift; sourceTree = "<group>"; };
 		EF89329723B44D3500CFBCDA /* NMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMModel.swift; sourceTree = "<group>"; };
 		EF89329A23B4524E00CFBCDA /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		EF8B025B23B5C2D600E630DC /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		EF8E1FB323BECE9E009071FA /* RxCoreLocationDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCoreLocationDelegateProxy.swift; sourceTree = "<group>"; };
 		EF9492C123B1AB920017A640 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EF9492C323B1AD810017A640 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EF9492C923B1B6690017A640 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -260,6 +266,9 @@
 				EFB87A23239D2C96007458E3 /* Constants.swift */,
 				EF9492D423B1D7020017A640 /* NavigationType.swift */,
 				EF8B025B23B5C2D600E630DC /* ViewModelType.swift */,
+				EF8930B023BD7D3C00BD4B5A /* MVVM+ViewController.swift */,
+				EF8930B223BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift */,
+				EF8E1FB323BECE9E009071FA /* RxCoreLocationDelegateProxy.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -564,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8499BD238D519A00A0F7B2 /* NMGLatLng+Extension.swift in Sources */,
+				EF8E1FB423BECE9E009071FA /* RxCoreLocationDelegateProxy.swift in Sources */,
 				EF9492D723B1F4110017A640 /* APIService.swift in Sources */,
 				EFB87A24239D2C96007458E3 /* Constants.swift in Sources */,
 				EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */,
@@ -571,11 +581,13 @@
 				EFB0FDF4237EA7F2005EEDE2 /* NetworkError.swift in Sources */,
 				EF9492D523B1D7020017A640 /* NavigationType.swift in Sources */,
 				EF9492D923B2047C0017A640 /* NMViewModel.swift in Sources */,
+				EF8930B123BD7D3C00BD4B5A /* MVVM+ViewController.swift in Sources */,
 				EF8B025C23B5C2D600E630DC /* ViewModelType.swift in Sources */,
 				EF072675237C162B00384D3E /* ARViewController.swift in Sources */,
 				EF9492C423B1AD810017A640 /* SearchViewModel.swift in Sources */,
 				EF9492DB23B206230017A640 /* NMViewController.swift in Sources */,
 				EF692C5D23BCD346003C29C6 /* ObservableType+Extension.swift in Sources */,
+				EF8930B323BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift in Sources */,
 				EF9492C223B1AB920017A640 /* SearchViewController.swift in Sources */,
 				EF89329B23B4524E00CFBCDA /* Search.swift in Sources */,
 				EFB0FDF2237EA6B7005EEDE2 /* LocationData.swift in Sources */,
