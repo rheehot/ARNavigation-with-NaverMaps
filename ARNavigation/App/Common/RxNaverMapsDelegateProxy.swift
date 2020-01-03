@@ -26,48 +26,19 @@ class RxNMFMapViewDelegateProxy: DelegateProxy<NMFNaverMapView, NMFMapViewDelega
     }
 }
 
-
-class RxNMFLocationManagerDelegateProxy: DelegateProxy<NMFLocationManager, NMFLocationManagerDelegate>, DelegateProxyType, NMFLocationManagerDelegate {
-    static func registerKnownImplementations() {
-        self.register{ (locationManager) -> RxNMFLocationManagerDelegateProxy in
-            RxNMFLocationManagerDelegateProxy(parentObject: locationManager, delegateProxy: self)
-        }
-    }
-    
-    static func currentDelegate(for object: NMFLocationManager) -> NMFLocationManagerDelegate? {
-        return object.delegate
-    }
-    
-    static func setCurrentDelegate(_ delegate: NMFLocationManagerDelegate?, to object: NMFLocationManager) {
-        object.add(delegate)
-    }
-    
-}
-
-extension NMFLocationManager {
-    var delegate: NMFLocationManagerDelegate {
-        return  NMFLocationManager.sharedInstance()!.delegate
-    }
-}
-
-
 extension Reactive where Base: NMFNaverMapView {
-    var delegate: DelegateProxy<NMFNaverMapView, NMFMapViewDelegate> {
+    var delegateNMFMapView: DelegateProxy<NMFNaverMapView, NMFMapViewDelegate> {
         return RxNMFMapViewDelegateProxy.proxy(for: self.base)
     }
     
     var didTapMapView: Observable<NMGLatLng> {
         // 처음 map -> parameter 컬렉션 반환 -> parameter[1] == latlng: NMGLatLng임
-        return delegate.methodInvoked(#selector(NMFMapViewDelegate.didTapMapView(_:latLng:)))
-            .map {
-                return ($0[1] as? NMGLatLng ?? NMGLatLng())
-        }
+        return delegateNMFMapView.methodInvoked(#selector(NMFMapViewDelegate.didTapMapView(_:latLng:)))
+            .map { return ($0[1] as? NMGLatLng ?? NMGLatLng()) }
     }
     
-    var currentLocationChange: Observable<[Any]> {
-        return delegate.methodInvoked(#selector(NMFLocationManagerDelegate.locationManager(_:didUpdateLocations:)))
-            .map{
-                return $0[1] as? [Any] ?? []
-        }
+    var regionDidChangeAnimated: Observable<Bool> {
+        return delegateNMFMapView.methodInvoked(#selector(NMFMapViewDelegate.mapView(_:regionDidChangeAnimated:byReason:)))
+            .map { return $0[1] as? Bool ?? false }
     }
 }

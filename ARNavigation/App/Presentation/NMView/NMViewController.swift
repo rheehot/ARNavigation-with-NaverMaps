@@ -17,11 +17,15 @@ class NMViewController: UIViewController {
     @IBOutlet weak var navigationButton: UIButton!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var lngLabel: UILabel!
+    let locationManager = CLLocationManager()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNaverMapView()
+        locationManager.requestWhenInUseAuthorization()
+        // locationManager.startUpdatingLocation() 
+        bind()
     }
     
     private func setUpNaverMapView() {
@@ -39,29 +43,28 @@ class NMViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        naverMapView.rx.currentLocationChange
+        naverMapView.rx.regionDidChangeAnimated
+            .asObservable()
+            .subscribe(onNext: {
+                print($0)
+            })
+            .disposed(by: disposeBag)
+        
+        locationManager.rx.didUpdateLocations
             .asObservable()
             .map {
-                guard let curLocation = $0.last as? CLLocation else { return "" }
-                return "경도: \(curLocation.coordinate.latitude)"
+                return "경도 : \($0.lat)"
         }
         .bind(to: latLabel.rx.text)
         .disposed(by: disposeBag)
         
-        naverMapView.rx.currentLocationChange
+        locationManager.rx.didUpdateLocations
             .asObservable()
             .map {
-                guard let curLocation = $0.last as? CLLocation else { return "" }
-                return "위도: \(curLocation.coordinate.longitude)"
+                return "경도 : \($0.lng)"
         }
         .bind(to: lngLabel.rx.text)
         .disposed(by: disposeBag)
         
     }
-    
 }
-
-
-
-
-
