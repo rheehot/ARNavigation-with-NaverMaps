@@ -10,7 +10,6 @@ import RxCocoa
 import RxSwift
 import NMapsMap
 
-
 class RxCLLocationManagerDelegateProxy: DelegateProxy<CLLocationManager, CLLocationManagerDelegate>, DelegateProxyType, CLLocationManagerDelegate {
     static func registerKnownImplementations() {
         self.register { (manager) -> RxCLLocationManagerDelegateProxy in
@@ -24,7 +23,6 @@ class RxCLLocationManagerDelegateProxy: DelegateProxy<CLLocationManager, CLLocat
     
     static func setCurrentDelegate(_ delegate: CLLocationManagerDelegate?, to object: CLLocationManager) {
         object.delegate = delegate
-        object.startUpdatingLocation()
     }
 }
 
@@ -33,13 +31,30 @@ extension Reactive where Base: CLLocationManager {
         return RxCLLocationManagerDelegateProxy.proxy(for: self.base)
     }
     
-    var didUpdateLocations: Observable<NMGLatLng> {
+    var didUpdateLocations: Observable<Result<NMGLatLng, GPSError>> {
         return delegateCLLocationManager.methodInvoked(#selector(CLLocationManagerDelegate.locationManager(_:didUpdateLocations:)))
             .map {
-                guard let curLocation = $0[1] as? [CLLocation] else { return NMGLatLng(lat: 0, lng: 0) }
+                guard let curLocation = $0[1] as? [CLLocation] else {  return .failure(GPSError.coreLocationError) }
                 let coordinate = curLocation[0].coordinate
-                return NMGLatLng(lat: coordinate.latitude, lng: coordinate.longitude)
+                return .success(NMGLatLng(lat: coordinate.latitude, lng: coordinate.longitude))
+        }
+    }
+    
+    var didChangeAuthorization: Observable<CLAuthorizationStatus> {
+        return delegateCLLocationManager.methodInvoked(#selector(CLLocationManagerDelegate.locationManager(_:didChangeAuthorization:)))
+            .map {
+                return  $0[1] as? CLAuthorizationStatus ?? CLAuthorizationStatus.notDetermined
+        }
+    }
+    
+    var didFailWithErorr: Observable<Error> {
+        return delegateCLLocationManager.methodInvoked(#selector(CLLocationManagerDelegate.locationManager(_:didFailWithError:)))
+            .map {
+                // TODO: 강제 추출 했음 .. 바인딩 해서 바꿔야함
+                return ($0[1] as? Error)!
         }
     }
     
 }
+
+

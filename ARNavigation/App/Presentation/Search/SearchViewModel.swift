@@ -7,13 +7,22 @@
 //
 
 import Foundation
+import NMapsMap
 import RxSwift
 import RxCocoa
 
-final class SearchViewModel {
+protocol SearchViewBindable {
+    // View에서 ViewModel로 Input
+    var navigationButtonTapped: PublishSubject<Void> { get }
+    var naverMapViewTapped: PublishSubject<Void> { get }
     
-    let viewWillAppearSubject = PublishSubject<Void>()
-    let selectedIndexSubject = PublishSubject<IndexPath>()
-    let searchQuerySubject = BehaviorSubject(value: "")
+    // ViewModel에서  View로 Output
+    var nmMarker: Driver<[NMFMarker]> { get }
+    var nmPath: Driver<NMFPath> { get }
+    var directionPoins: Driver<[NMGLatLng]> { get }
+    var errorMessage: Signal<String> { get }
+}
+
+final class SearchViewModel {
     
 }

@@ -10,6 +10,23 @@ target 'ARNavigation' do
     pod 'SwiftLint'
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'RxOptional'
+    pod 'RxKeyboard'
+    pod 'RxAppState'
+    pod 'RxDataSources'
+  
+  # Pods for Image & Ui
+    pod 'Kingfisher' 
+    pod 'Toaster'
+    pod 'SnapKit'
+    pod 'Hero'
+   
+def testing_pods
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'RxBlocking'
+  pod 'RxTest'
+end	
 
   target 'ARNavigationTests' do
     inherit! :search_paths
