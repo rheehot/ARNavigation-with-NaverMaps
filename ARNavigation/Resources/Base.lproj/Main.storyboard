@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="길안내 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-8x-QsJ">
-                                <rect key="frame" x="160.66666666666666" y="707" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtG-ul-vD2" customClass="NMFNaverMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
                                 <subviews>
@@ -41,49 +35,69 @@
                                     <constraint firstItem="lxX-6H-I5X" firstAttribute="leading" secondItem="CtG-ul-vD2" secondAttribute="leading" constant="20" symbolic="YES" id="uh1-OZ-aUq"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-eO-FYw">
-                                <rect key="frame" x="355" y="700" width="39" height="30"/>
-                                <state key="normal" title="길찾기"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-lR-2Yy">
-                                <rect key="frame" x="331" y="738" width="63" height="30"/>
-                                <state key="normal" title="AR 길안내"/>
-                                <connections>
-                                    <segue destination="5wj-fi-5Wd" kind="show" id="zVM-UO-eKw"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-GC-2uH">
-                                <rect key="frame" x="20" y="760" width="129" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-2S-7NS">
-                                <rect key="frame" x="20" y="811" width="129" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-UQ-ocE">
+                                <rect key="frame" x="0.0" y="689" width="414" height="173"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-eO-FYw">
+                                        <rect key="frame" x="367" y="33" width="39" height="30"/>
+                                        <state key="normal" title="길찾기"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-lR-2Yy">
+                                        <rect key="frame" x="343" y="8" width="63" height="30"/>
+                                        <state key="normal" title="AR 길안내"/>
+                                        <connections>
+                                            <segue destination="5wj-fi-5Wd" kind="show" id="zVM-UO-eKw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-GC-2uH">
+                                        <rect key="frame" x="10" y="106" width="34.333333333333336" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-2S-7NS">
+                                        <rect key="frame" x="10" y="70" width="34.333333333333336" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="길안내 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-8x-QsJ">
+                                        <rect key="frame" x="160.66666666666666" y="8" width="93" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="AkR-2S-7NS" firstAttribute="top" secondItem="f1H-UQ-ocE" secondAttribute="top" constant="70" id="4JF-Jd-5zM"/>
+                                    <constraint firstItem="AU2-eO-FYw" firstAttribute="top" secondItem="f1H-UQ-ocE" secondAttribute="top" constant="33" id="A8k-Zo-NYG"/>
+                                    <constraint firstAttribute="trailing" secondItem="iEl-lR-2Yy" secondAttribute="trailing" constant="8" id="Dyp-Ii-oZG"/>
+                                    <constraint firstItem="AkR-2S-7NS" firstAttribute="leading" secondItem="f1H-UQ-ocE" secondAttribute="leading" constant="10" id="HY2-gx-2nE"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="AkR-2S-7NS" secondAttribute="trailing" constant="369.67000000000002" id="PEg-Uu-I4N"/>
+                                    <constraint firstItem="AU2-eO-FYw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f1H-UQ-ocE" secondAttribute="leading" constant="20" symbolic="YES" id="VWz-9g-qci"/>
+                                    <constraint firstItem="6TA-GC-2uH" firstAttribute="leading" secondItem="f1H-UQ-ocE" secondAttribute="leading" constant="10" id="VfB-FR-apm"/>
+                                    <constraint firstItem="Ep4-8x-QsJ" firstAttribute="centerX" secondItem="f1H-UQ-ocE" secondAttribute="centerX" id="ex6-lW-FJc"/>
+                                    <constraint firstItem="Ep4-8x-QsJ" firstAttribute="top" secondItem="iEl-lR-2Yy" secondAttribute="top" id="fOw-rR-MAb"/>
+                                    <constraint firstItem="6TA-GC-2uH" firstAttribute="top" secondItem="AkR-2S-7NS" secondAttribute="bottom" constant="15" id="ffB-sP-mdd"/>
+                                    <constraint firstItem="iEl-lR-2Yy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ep4-8x-QsJ" secondAttribute="trailing" symbolic="YES" id="fjF-fV-UUf"/>
+                                    <constraint firstItem="AU2-eO-FYw" firstAttribute="trailing" secondItem="iEl-lR-2Yy" secondAttribute="trailing" id="gDo-yQ-tmR"/>
+                                    <constraint firstItem="Ep4-8x-QsJ" firstAttribute="top" secondItem="f1H-UQ-ocE" secondAttribute="topMargin" id="keU-Ss-C1T"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6TA-GC-2uH" secondAttribute="trailing" constant="369.67000000000002" id="lgp-lp-Rew"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="CtG-ul-vD2" secondAttribute="bottom" constant="206" id="1af-JP-WTD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="AkR-2S-7NS" secondAttribute="trailing" constant="265" id="1ox-ZY-xCs"/>
                             <constraint firstItem="CtG-ul-vD2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3DY-Fz-GHV"/>
                             <constraint firstItem="CtG-ul-vD2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4l7-4g-2eZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iEl-lR-2Yy" secondAttribute="trailing" constant="20" id="5MM-uX-gyD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6TA-GC-2uH" secondAttribute="trailing" constant="265" id="Cac-pb-3Ku"/>
-                            <constraint firstItem="AkR-2S-7NS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DML-vU-Yxk"/>
-                            <constraint firstItem="Ep4-8x-QsJ" firstAttribute="top" secondItem="CtG-ul-vD2" secondAttribute="bottom" constant="17" id="FJs-YU-mPL"/>
-                            <constraint firstItem="iEl-lR-2Yy" firstAttribute="top" secondItem="AU2-eO-FYw" secondAttribute="bottom" constant="8" id="Js1-pI-w3C"/>
+                            <constraint firstItem="f1H-UQ-ocE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CV3-aM-u7f"/>
                             <constraint firstItem="CtG-ul-vD2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jvd-MH-0CJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AkR-2S-7NS" secondAttribute="bottom" constant="30" id="QoJ-TQ-vJm"/>
-                            <constraint firstItem="AU2-eO-FYw" firstAttribute="top" secondItem="CtG-ul-vD2" secondAttribute="bottom" constant="10" id="XRc-XT-MEY"/>
-                            <constraint firstItem="6TA-GC-2uH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c2C-II-n7J"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AU2-eO-FYw" secondAttribute="trailing" constant="20" id="fe4-AZ-dsS"/>
+                            <constraint firstItem="f1H-UQ-ocE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="645" id="KCM-ne-zKV"/>
+                            <constraint firstItem="f1H-UQ-ocE" firstAttribute="trailing" secondItem="CtG-ul-vD2" secondAttribute="trailing" id="d5Y-HK-Lxu"/>
                             <constraint firstItem="CtG-ul-vD2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mdv-R4-Ul0"/>
-                            <constraint firstItem="AkR-2S-7NS" firstAttribute="top" secondItem="6TA-GC-2uH" secondAttribute="bottom" constant="30" id="rzw-am-b6R"/>
-                            <constraint firstItem="CtG-ul-vD2" firstAttribute="centerX" secondItem="Ep4-8x-QsJ" secondAttribute="centerX" id="sWL-Dw-PZL"/>
+                            <constraint firstItem="f1H-UQ-ocE" firstAttribute="leading" secondItem="CtG-ul-vD2" secondAttribute="leading" id="sfh-YD-2FV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -92,6 +106,7 @@
                         <outlet property="lngLabel" destination="AkR-2S-7NS" id="88V-kt-Jcg"/>
                         <outlet property="naverMapView" destination="CtG-ul-vD2" id="Q6Q-fF-uc5"/>
                         <outlet property="navigationButton" destination="AU2-eO-FYw" id="xeX-YJ-col"/>
+                        <outlet property="symbolInfoView" destination="f1H-UQ-ocE" id="Jnu-gk-a1Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

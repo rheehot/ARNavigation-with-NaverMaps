@@ -1,34 +1,80 @@
 PODS:
+  - Differentiator (4.0.1)
+  - Hero (1.5.0)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
   - NMapsMap (3.6.0)
+  - RxAppState (1.6.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxKeyboard (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxOptional (4.1.0):
+    - RxCocoa (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
+  - SnapKit (5.0.1)
   - SwiftLint (0.37.0)
+  - Toaster (2.2.0)
 
 DEPENDENCIES:
+  - Hero
+  - Kingfisher
   - NMapsMap
+  - RxAppState
   - RxCocoa
+  - RxDataSources
+  - RxKeyboard
+  - RxOptional
   - RxSwift
+  - SnapKit
   - SwiftLint
+  - Toaster
 
 SPEC REPOS:
   trunk:
+    - Differentiator
+    - Hero
+    - Kingfisher
     - NMapsMap
+    - RxAppState
     - RxCocoa
+    - RxDataSources
+    - RxKeyboard
+    - RxOptional
     - RxRelay
     - RxSwift
+    - SnapKit
     - SwiftLint
+    - Toaster
 
 SPEC CHECKSUMS:
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   NMapsMap: be525094041c1ba7ab5035c9b3215c797a2bbb13
+  RxAppState: b633d7370970ecb80081912ea08a7bf3eb644b4e
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
+  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: c078a14d7d7ade75e5507795d185e3da41d844d2
+  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
 
-PODFILE CHECKSUM: 5067d16c6f9215d0174377d5a4de2731e35f6d49
+PODFILE CHECKSUM: 45ee3b86504a7b9fa01e5b6c3319c033aa078226
 
 COCOAPODS: 1.8.4

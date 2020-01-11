@@ -27,18 +27,28 @@ class RxNMFMapViewDelegateProxy: DelegateProxy<NMFNaverMapView, NMFMapViewDelega
 }
 
 extension Reactive where Base: NMFNaverMapView {
+    // delegate
     var delegateNMFMapView: DelegateProxy<NMFNaverMapView, NMFMapViewDelegate> {
         return RxNMFMapViewDelegateProxy.proxy(for: self.base)
     }
-    
+    // map 터치시 좌표 봔환 콜백
     var didTapMapView: Observable<NMGLatLng> {
-        // 처음 map -> parameter 컬렉션 반환 -> parameter[1] == latlng: NMGLatLng임
         return delegateNMFMapView.methodInvoked(#selector(NMFMapViewDelegate.didTapMapView(_:latLng:)))
-            .map { return ($0[1] as? NMGLatLng ?? NMGLatLng()) }
+            .map {
+                return ($0[1] as? NMGLatLng ?? NMGLatLng())
+        }
     }
-    
+//    // map symbol 터치시 해당 심볼 정보 반환 콜백
+//    var didTapSymbol: ControlEvent<NMFSymbol> {
+//        let source : Observable<NMFSymbol> = delegateNMFMapView.methodInvoked(#selector(NMFMapViewDelegate.mapView(_:didTap:)))
+//        .map(<#T##transform: ([Any]) throws -> Result##([Any]) throws -> Result#>)
+//    }
+//    
     var regionDidChangeAnimated: Observable<Bool> {
         return delegateNMFMapView.methodInvoked(#selector(NMFMapViewDelegate.mapView(_:regionDidChangeAnimated:byReason:)))
-            .map { return $0[1] as? Bool ?? false }
+            .map {
+                return $0[1] as? Bool ?? false
+        }
     }
+    
 }
