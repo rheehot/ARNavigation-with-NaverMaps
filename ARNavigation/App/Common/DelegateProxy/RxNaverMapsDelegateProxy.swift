@@ -10,6 +10,13 @@ import RxSwift
 import RxCocoa
 import NMapsMap
 
+func castOrThrow<T>(_ resultType: T.Type, _ object: Any) throws -> T {
+    guard let returnValue = object as? T else {
+        throw RxCocoaError.castingError(object: object, targetType: resultType)
+    }
+    return returnValue
+}
+
 class RxNMFMapViewDelegateProxy: DelegateProxy<NMFNaverMapView, NMFMapViewDelegate>, DelegateProxyType, NMFMapViewDelegate {
     static func registerKnownImplementations() {
         self.register { (naverMapView) -> RxNMFMapViewDelegateProxy in
@@ -24,6 +31,7 @@ class RxNMFMapViewDelegateProxy: DelegateProxy<NMFNaverMapView, NMFMapViewDelega
     static func setCurrentDelegate(_ delegate: NMFMapViewDelegate?, to object: NMFNaverMapView) {
         object.delegate = delegate
     }
+    
 }
 
 extension Reactive where Base: NMFNaverMapView {
@@ -32,18 +40,20 @@ extension Reactive where Base: NMFNaverMapView {
         return RxNMFMapViewDelegateProxy.proxy(for: self.base)
     }
     // map 터치시 좌표 봔환 콜백
-    var didTapMapView: Observable<NMGLatLng> {
-        return delegateNMFMapView.methodInvoked(#selector(NMFMapViewDelegate.didTapMapView(_:latLng:)))
-            .map {
-                return ($0[1] as? NMGLatLng ?? NMGLatLng())
-        }
+    var didTapMapView: ControlEvent<NMGLatLng> {
+        let source: Observable<NMGLatLng> = delegateNMFMapView
+            .methodInvoked(#selector(NMFMapViewDelegate.didTapMapView(_:latLng:)))
+            .map { try castOrThrow(NMGLatLng.self, $0[1]) }
+        return ControlEvent(events: source)
     }
-//    // map symbol 터치시 해당 심볼 정보 반환 콜백
-//    var didTapSymbol: ControlEvent<NMFSymbol> {
-//        let source : Observable<NMFSymbol> = delegateNMFMapView.methodInvoked(#selector(NMFMapViewDelegate.mapView(_:didTap:)))
-//        .map(<#T##transform: ([Any]) throws -> Result##([Any]) throws -> Result#>)
-//    }
-//    
+    // map symbol 터치시 해당 심볼 정보 반환 콜백
+    var didTapSymbol: ControlEvent<NMFSymbol> {
+        let source : Observable<NMFSymbol> = delegateNMFMapView
+            .methodInvoked(#selector(NMFMapViewDelegate.mapView(_:didTap:)))
+            .map { try castOrThrow(NMFSymbol.self, $0[1]) }
+        return ControlEvent(events: source)
+    }
+    
     var regionDidChangeAnimated: Observable<Bool> {
         return delegateNMFMapView.methodInvoked(#selector(NMFMapViewDelegate.mapView(_:regionDidChangeAnimated:byReason:)))
             .map {
@@ -52,3 +62,5 @@ extension Reactive where Base: NMFNaverMapView {
     }
     
 }
+
+

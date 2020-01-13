@@ -34,8 +34,12 @@ extension Reactive where Base: CLLocationManager {
     var didUpdateLocations: Observable<Result<NMGLatLng, GPSError>> {
         return delegateCLLocationManager.methodInvoked(#selector(CLLocationManagerDelegate.locationManager(_:didUpdateLocations:)))
             .map {
-                guard let curLocation = $0[1] as? [CLLocation] else {  return .failure(GPSError.coreLocationError) }
+                guard let curLocation = $0[1] as? [CLLocation] else {
+                    print("getCurrentLocation 실패")
+                    return .failure(GPSError.coreLocationError)
+                }
                 let coordinate = curLocation[0].coordinate
+                
                 return .success(NMGLatLng(lat: coordinate.latitude, lng: coordinate.longitude))
         }
     }

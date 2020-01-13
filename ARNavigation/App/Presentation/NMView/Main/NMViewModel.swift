@@ -18,16 +18,27 @@ protocol NMViewBindable {
 
 class NMViewModel: NMViewBindable {
     // 현재위치가 변경되면 담을 NMGLatLng 경위도 좌표
-    let curLocation: Driver<NMGLatLng>
+    // let changedCurLocation PublishSubject<NMGLatLng>
+    // let didTappedMap: Driver<Void>
+    let locationData: Signal<NMGLatLng>
     
     init(model: NMModel = NMModel()) {
-        let latlngResult = model.getCurrentLocation().flatMap({ (result) -> ObservableConvertibleType in
-            <#code#>
-        })
+        print("ViewModel Init")
+        let locationResult = model.getCurrentLocation()
             .asObservable()
+            .share()
         
-        self.curLocation = latlngResult.asDriver(onErrorJustReturn: .)
-        print(latlngResult)
+        let locationValue = locationResult
+            .map { result -> NMGLatLng? in
+                guard case .success(let value) = result else { return NMGLatLng(lat: 0, lng: 0) }
+                return value
+        }
+        .filterNil()
+        
+        self.locationData = locationValue
+            .map(model.parseData)
+            .filterNil().asSignal(onErrorSignalWith: .empty())
+        print("ViewModel", locationData)
     }
     
 }

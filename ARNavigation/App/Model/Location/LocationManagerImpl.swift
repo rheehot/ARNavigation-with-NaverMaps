@@ -6,8 +6,10 @@
 //  Copyright © 2020 youngjun goo. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
 import NMapsMap
+
 
 class LocationManagerImpl: NSObject {
     
@@ -67,11 +69,13 @@ extension LocationManagerImpl: LocationManager {
         locationManager.stopUpdatingLocation()
     }
     
+    func didUpdateLocations() -> Observable<Result<NMGLatLng, GPSError>> {
+        return locationManager.rx.didUpdateLocations
+    }
+    
 }
 
 
 extension LocationManagerImpl: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-    }
+
 }
