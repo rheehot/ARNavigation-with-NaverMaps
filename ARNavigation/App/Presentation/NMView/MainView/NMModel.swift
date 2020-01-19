@@ -15,15 +15,13 @@ struct NMModel {
     let locationManager: LocationManager
     
     init(locationManager: LocationManager = LocationManagerImpl()) {
-        print("Model Init")
+        // locationManager
         self.locationManager = locationManager
-        print(self.locationManager)
-        locationManager.requestAuthorization()
-        locationManager.startUpdatingLocation()
+        self.locationManager.requestAuthorization()
+        self.locationManager.startUpdatingLocation()
     }
     
     func getCurrentLocation() -> Observable<Result<NMGLatLng, GPSError>> {
-        print("Model getCurrentLocation")
         return locationManager.didUpdateLocations()
     }
     

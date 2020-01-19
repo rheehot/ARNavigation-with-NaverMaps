@@ -76,6 +76,6 @@ extension LocationManagerImpl: LocationManager {
 }
 
 
-extension LocationManagerImpl: CLLocationManagerDelegate {
+extension LocationManagerImpl: CLLocationManagerDelegate, NMFLocationManagerDelegate {
 
 }

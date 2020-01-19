@@ -16,6 +16,7 @@ class NMViewController: UIViewController {
     
     @IBOutlet weak var naverMapView: NMFNaverMapView!
     @IBOutlet weak var navigationButton: UIButton!
+    @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var lngLabel: UILabel!
     @IBOutlet weak var symbolInfoView: UIView!
@@ -24,6 +25,7 @@ class NMViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        naverMapView.delegate = self
         setUpNaverMapView()
         bind()
     }
@@ -40,18 +42,15 @@ class NMViewController: UIViewController {
         naverMapView.showIndoorLevelPicker = true
     }
     
-    
     func bind() {
         self.disposeBag = DisposeBag()
-        // GPS 수신 동의 체크
-        // checkGPSAuthorization()
         
-        naverMapView.rx.didTapSymbol
-            .asObservable()
-            .subscribe(onNext : {
-                print($0)
-            })
-            .disposed(by: disposeBag)
+//        naverMapView.mapView.rx.didTapSymbol
+//            .asObservable()
+//            .subscribe(onNext : {
+//                print($0)
+//            })
+//            .disposed(by: disposeBag)
         
         naverMapView.rx.didTapMapView
             .asObservable()
@@ -67,22 +66,6 @@ class NMViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        //        locationManager.rx.didUpdateLocations
-        //            .asObservable()
-        //            .map {
-        //                return "경도 : \($0.lat)"
-        //        }
-        //        .bind(to: latLabel.rx.text)
-        //        .disposed(by: disposeBag)
-        //
-        //        locationManager.rx.didUpdateLocations
-        //            .asObservable()
-        //            .map {
-        //                return "경도 : \($0.lng)"
-        //        }
-        //        .bind(to: lngLabel.rx.text)
-        //        .disposed(by: disposeBag)
-        
         
         viewModel.locationData
             .emit(to: self.rx.setData)
@@ -90,20 +73,32 @@ class NMViewController: UIViewController {
         
     }
     
-    //    private func checkGPSAuthorization() {
-    //        locationManager.rx.didChangeAuthorization
-    //            .asObservable()
-    //            .subscribe(onNext: {
-    //                print($0)
-    //            })
-    //            .disposed(by: disposeBag)
-    //    }
+    @IBAction func respondToLongPress(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            let coord = sender.location(in: naverMapView.mapView)
+            let latlng = naverMapView.mapView.projection.latlng(from: coord)
+            let alertController = UIAlertController(title: "지도 롱클릭", message: latlng.convertString, preferredStyle: .alert)
+            present(alertController, animated: true) {
+                DispatchQueue.main.asyncAfter(deadline: (DispatchTime.now() + 0.5), execute: {
+                    alertController.dismiss(animated: true, completion: nil)
+                })
+            }
+        }
+    }
+    
+}
+
+
+extension NMViewController: NMFMapViewDelegate {
+    func mapView(_ mapView: NMFMapView, didTap symbol: NMFSymbol) -> Bool {
+        symbolLabel.text = symbol.caption
+        return true
+    }
 }
 
 extension Reactive where Base: NMViewController {
     var setData: Binder<NMGLatLng> {
         return Binder(base) { base, data in
-            print(data)
             base.latLabel.text = "경도: \(data.lat)"
             base.lngLabel.text = "위도: \(data.lng)"
         }

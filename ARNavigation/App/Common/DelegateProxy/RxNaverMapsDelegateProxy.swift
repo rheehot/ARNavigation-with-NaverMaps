@@ -35,6 +35,7 @@ class RxNMFMapViewDelegateProxy: DelegateProxy<NMFNaverMapView, NMFMapViewDelega
 }
 
 extension Reactive where Base: NMFNaverMapView {
+    
     // delegate
     var delegateNMFMapView: DelegateProxy<NMFNaverMapView, NMFMapViewDelegate> {
         return RxNMFMapViewDelegateProxy.proxy(for: self.base)
@@ -61,6 +62,28 @@ extension Reactive where Base: NMFNaverMapView {
         }
     }
     
+//    var respondToLongPress: ControlEvent<NMGLatLng> {
+//        let source: Observable<NMGLatLng> = delegateNMFMapView
+//            .methodInvoked(#selector(NMFMapViewDelegate.respondToLongPress(_:_:)))
+//            .map {
+//                guard let sender = $0[1] as? UILongPressGestureRecognizer,
+//                    let mapView = $0[0] as? NMFMapView else { return NMGLatLng(lat: 0, lng: 0) }
+//                if sender.state == .began {
+//                    let coord = sender.location(in: mapView)
+//                    return
+//                }
+//        }
+//    }
+    
 }
 
+//extension NMFMapViewDelegate {
+//    @objc func respondToLongPress(_ mapView: NMFMapView, _ sender: UILongPressGestureRecognizer) {
+//        if sender.state == .began {
+//            let coord = sender.location(in: mapView)
+//            let _ = mapView.projection.latlng(from: coord)
+//        }
+//    }
+//}
+//
 

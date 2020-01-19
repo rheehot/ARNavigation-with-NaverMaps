@@ -19,8 +19,6 @@
 		EF072675237C162B00384D3E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF072674237C162B00384D3E /* ARViewController.swift */; };
 		EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */; };
 		EF4367E523C2D40F000EA528 /* GPSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4367E423C2D40F000EA528 /* GPSError.swift */; };
-		EF4367E923C3281F000EA528 /* SymbolInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4367E823C3281F000EA528 /* SymbolInfoView.swift */; };
-		EF4367EB23C32843000EA528 /* SymbolInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4367EA23C32843000EA528 /* SymbolInfoView.xib */; };
 		EF4367ED23C424EF000EA528 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4367EC23C424EF000EA528 /* UIView+Extension.swift */; };
 		EF4367EF23C426DD000EA528 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4367EE23C426DD000EA528 /* NSObject+Extension.swift */; };
 		EF692C5D23BCD346003C29C6 /* ObservableType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF692C5C23BCD346003C29C6 /* ObservableType+Extension.swift */; };
@@ -92,8 +90,6 @@
 		EF072674237C162B00384D3E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = ARNavigation/App/Controller/ARViewController.swift; sourceTree = SOURCE_ROOT; };
 		EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreLocation+Extension.swift"; path = "ARNavigation/App/Extension/CoreLocation+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		EF4367E423C2D40F000EA528 /* GPSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSError.swift; sourceTree = "<group>"; };
-		EF4367E823C3281F000EA528 /* SymbolInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolInfoView.swift; sourceTree = "<group>"; };
-		EF4367EA23C32843000EA528 /* SymbolInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymbolInfoView.xib; sourceTree = "<group>"; };
 		EF4367EC23C424EF000EA528 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EF4367EE23C426DD000EA528 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		EF692C5C23BCD346003C29C6 /* ObservableType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extension.swift"; sourceTree = "<group>"; };
@@ -217,23 +213,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		EF4367E623C327CE000EA528 /* Main */ = {
+		EF4367E623C327CE000EA528 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
 				EF9492DA23B206230017A640 /* NMViewController.swift */,
 				EF9492D823B2047C0017A640 /* NMViewModel.swift */,
 				EF89329723B44D3500CFBCDA /* NMModel.swift */,
 			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		EF4367E723C327E8000EA528 /* SymbolInfo */ = {
-			isa = PBXGroup;
-			children = (
-				EF4367E823C3281F000EA528 /* SymbolInfoView.swift */,
-				EF4367EA23C32843000EA528 /* SymbolInfoView.xib */,
-			);
-			path = SymbolInfo;
+			path = MainView;
 			sourceTree = "<group>";
 		};
 		EF8499D1239627CD00A0F7B2 /* Presentation */ = {
@@ -248,8 +235,7 @@
 		EF89329623B44CDE00CFBCDA /* NMView */ = {
 			isa = PBXGroup;
 			children = (
-				EF4367E723C327E8000EA528 /* SymbolInfo */,
-				EF4367E623C327CE000EA528 /* Main */,
+				EF4367E623C327CE000EA528 /* MainView */,
 			);
 			path = NMView;
 			sourceTree = "<group>";
@@ -493,7 +479,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4367EB23C32843000EA528 /* SymbolInfoView.xib in Resources */,
 				EF072651237C12AF00384D3E /* LaunchScreen.storyboard in Resources */,
 				EF07264E237C12AF00384D3E /* Assets.xcassets in Resources */,
 				EF07264C237C12AC00384D3E /* Main.storyboard in Resources */,
@@ -628,7 +613,6 @@
 				EF8E1FB423BECE9E009071FA /* RxCoreLocationDelegateProxy.swift in Sources */,
 				EF9492D723B1F4110017A640 /* APIService.swift in Sources */,
 				EFB87A24239D2C96007458E3 /* Constants.swift in Sources */,
-				EF4367E923C3281F000EA528 /* SymbolInfoView.swift in Sources */,
 				EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */,
 				EF89329823B44D3500CFBCDA /* NMModel.swift in Sources */,
 				EF4367EF23C426DD000EA528 /* NSObject+Extension.swift in Sources */,

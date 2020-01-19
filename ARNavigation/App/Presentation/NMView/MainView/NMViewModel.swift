@@ -13,17 +13,24 @@ import RxCocoa
 import RxOptional
 
 protocol NMViewBindable {
-    
+    // input
+    // var longPressedMap: ControlEvent<Void> { get }
+    // output
+    // var pressMapData: Signal<NMGLatLng> { get }
+    var locationData: Signal<NMGLatLng> { get }
 }
 
 class NMViewModel: NMViewBindable {
+    // input
+    // let longPressedMap: ControlEvent<Void>
+    // output
+    // let pressMapData: Signal<NMGLatLng>
+    let locationData: Signal<NMGLatLng>
     // 현재위치가 변경되면 담을 NMGLatLng 경위도 좌표
     // let changedCurLocation PublishSubject<NMGLatLng>
     // let didTappedMap: Driver<Void>
-    let locationData: Signal<NMGLatLng>
     
     init(model: NMModel = NMModel()) {
-        print("ViewModel Init")
         let locationResult = model.getCurrentLocation()
             .asObservable()
             .share()
@@ -35,10 +42,10 @@ class NMViewModel: NMViewBindable {
         }
         .filterNil()
         
-        self.locationData = locationValue
+        locationData = locationValue
             .map(model.parseData)
-            .filterNil().asSignal(onErrorSignalWith: .empty())
-        print("ViewModel", locationData)
+            .filterNil()
+            .asSignal(onErrorSignalWith: .empty())
     }
     
 }

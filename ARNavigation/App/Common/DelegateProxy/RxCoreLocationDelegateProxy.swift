@@ -35,7 +35,6 @@ extension Reactive where Base: CLLocationManager {
         return delegateCLLocationManager.methodInvoked(#selector(CLLocationManagerDelegate.locationManager(_:didUpdateLocations:)))
             .map {
                 guard let curLocation = $0[1] as? [CLLocation] else {
-                    print("getCurrentLocation 실패")
                     return .failure(GPSError.coreLocationError)
                 }
                 let coordinate = curLocation[0].coordinate

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,6 +34,9 @@
                                     <constraint firstAttribute="trailing" secondItem="lxX-6H-I5X" secondAttribute="trailing" constant="20" symbolic="YES" id="uAd-Bg-Bay"/>
                                     <constraint firstItem="lxX-6H-I5X" firstAttribute="leading" secondItem="CtG-ul-vD2" secondAttribute="leading" constant="20" symbolic="YES" id="uh1-OZ-aUq"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HuH-bu-tA3" appends="YES" id="6Cc-Xz-pcs"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-UQ-ocE">
                                 <rect key="frame" x="0.0" y="689" width="414" height="173"/>
@@ -49,20 +52,26 @@
                                             <segue destination="5wj-fi-5Wd" kind="show" id="zVM-UO-eKw"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="길안내 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-8x-QsJ">
+                                        <rect key="frame" x="160.66666666666666" y="8" width="93" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-GC-2uH">
-                                        <rect key="frame" x="10" y="106" width="34.333333333333336" height="21"/>
+                                        <rect key="frame" x="10" y="127" width="34.333333333333336" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-2S-7NS">
-                                        <rect key="frame" x="10" y="70" width="34.333333333333336" height="21"/>
+                                        <rect key="frame" x="10" y="91" width="34.333333333333336" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="길안내 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-8x-QsJ">
-                                        <rect key="frame" x="160.66666666666666" y="8" width="93" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="심볼:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm4-Aw-mOu">
+                                        <rect key="frame" x="10" y="60" width="40" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -70,9 +79,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="AkR-2S-7NS" firstAttribute="top" secondItem="f1H-UQ-ocE" secondAttribute="top" constant="70" id="4JF-Jd-5zM"/>
+                                    <constraint firstItem="AkR-2S-7NS" firstAttribute="top" secondItem="wm4-Aw-mOu" secondAttribute="bottom" constant="10" id="88m-Pf-qg8"/>
                                     <constraint firstItem="AU2-eO-FYw" firstAttribute="top" secondItem="f1H-UQ-ocE" secondAttribute="top" constant="33" id="A8k-Zo-NYG"/>
+                                    <constraint firstItem="wm4-Aw-mOu" firstAttribute="leading" secondItem="f1H-UQ-ocE" secondAttribute="leading" constant="10" id="Dcv-bV-ygD"/>
                                     <constraint firstAttribute="trailing" secondItem="iEl-lR-2Yy" secondAttribute="trailing" constant="8" id="Dyp-Ii-oZG"/>
+                                    <constraint firstItem="wm4-Aw-mOu" firstAttribute="top" secondItem="f1H-UQ-ocE" secondAttribute="top" constant="60" id="Eqj-05-Zme"/>
                                     <constraint firstItem="AkR-2S-7NS" firstAttribute="leading" secondItem="f1H-UQ-ocE" secondAttribute="leading" constant="10" id="HY2-gx-2nE"/>
                                     <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="AkR-2S-7NS" secondAttribute="trailing" constant="369.67000000000002" id="PEg-Uu-I4N"/>
                                     <constraint firstItem="AU2-eO-FYw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f1H-UQ-ocE" secondAttribute="leading" constant="20" symbolic="YES" id="VWz-9g-qci"/>
@@ -84,6 +95,7 @@
                                     <constraint firstItem="AU2-eO-FYw" firstAttribute="trailing" secondItem="iEl-lR-2Yy" secondAttribute="trailing" id="gDo-yQ-tmR"/>
                                     <constraint firstItem="Ep4-8x-QsJ" firstAttribute="top" secondItem="f1H-UQ-ocE" secondAttribute="topMargin" id="keU-Ss-C1T"/>
                                     <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6TA-GC-2uH" secondAttribute="trailing" constant="369.67000000000002" id="lgp-lp-Rew"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="wm4-Aw-mOu" secondAttribute="trailing" constant="364" id="wi2-IM-hMl"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -107,9 +119,15 @@
                         <outlet property="naverMapView" destination="CtG-ul-vD2" id="Q6Q-fF-uc5"/>
                         <outlet property="navigationButton" destination="AU2-eO-FYw" id="xeX-YJ-col"/>
                         <outlet property="symbolInfoView" destination="f1H-UQ-ocE" id="Jnu-gk-a1Z"/>
+                        <outlet property="symbolLabel" destination="wm4-Aw-mOu" id="YmT-WU-Ef2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="HuH-bu-tA3">
+                    <connections>
+                        <action selector="respondToLongPress:" destination="BYZ-38-t0r" id="7Zp-ee-7tQ"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="114.50892857142857"/>
         </scene>
