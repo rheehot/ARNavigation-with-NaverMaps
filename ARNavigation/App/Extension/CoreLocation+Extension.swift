@@ -17,7 +17,7 @@ extension CLLocationManagerDelegate {
         if let locality = placemark.locality , let subLocality = placemark.subLocality {
             let locationName = locality + " " + subLocality
             let curLocation =  NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
-            var currentLocationData = LocationData(locationName: locationName, curLocation: curLocation)
+            let currentLocationData = LocationData(locationName: locationName, curLocation: curLocation)
             return currentLocationData
         } else {
             print("현재 위치 데이터 생성 실패")

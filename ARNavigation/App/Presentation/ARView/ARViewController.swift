@@ -86,7 +86,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         let count = Float(positions.count)
         return SCNVector3Make(averageX / count, averageY / count, averageZ / count)
     }
-    
 }
 
 

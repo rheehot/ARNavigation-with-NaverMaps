@@ -9,9 +9,8 @@
 import UIKit
 
 extension UIView {
-    
     // UIView instantiateView
-    static func instnatiate(fromXib name: String) -> UIView? {
+    static func instantiate(fromXib name: String) -> UIView? {
         return UINib(nibName: name, bundle: nil)
             .instantiate(withOwner: nil, options: nil)
             .first as? UIView

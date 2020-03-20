@@ -13,13 +13,12 @@ extension NSObject {
     var stringFromClass: String {
         return NSStringFromClass(type(of: self))
             .components(separatedBy: ".")
-        .last ?? ""
+            .last ?? ""
     }
     
     static var stringFromClass: String {
         return NSStringFromClass(self)
             .components(separatedBy: ".")
-        .last ?? ""
+            .last ?? ""
     }
-
 }

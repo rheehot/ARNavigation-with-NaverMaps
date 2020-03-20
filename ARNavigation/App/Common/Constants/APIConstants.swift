@@ -8,19 +8,17 @@
 
 import Foundation
 
-struct NaverSearchAPI {
+public struct NaverSearchAPI {
     static let scheme: String = "https"
-    static let host: String = "openapi.naver.com"
-    static let path = "/v1/search/local.json"
+    static let host: String = "naveropenapi.apigw.ntruss.com"
+    static let path = "/map-place/v1/search"
     // Naver Search
-    static let NSLClientId: String = "NSLClientId"
-    static let NSLClientSecret: String = "NSLClientSecret"
-    static let NSLbaseURL: String = "https://openapi.naver.com/v1/search/local.json"
-    static let NSLClientIdHeader: String = "X-Naver-Client-Id"
-    static let NSLClientSecretHeader: String = "X-Naver-Client-Secret"
+    static let NSLbaseURL: String = "https://naveropenapi.apigw.ntruss.com/map-place/v1/search"
+    static let NSLClientIdHeader: String = "X-NCP-APIGW-API-KEY-ID"
+    static let NSLClientSecretHeader: String = "X-NCP-APIGW-API-KEY"
 }
 
-struct NaverDirectionAPI {
+public struct NaverDirectionAPI {
     static let scheme: String = "https"
     static let host: String = "naveropenapi.apigw.ntruss.com"
     static let path: String = "map-direction/v1/driving"
