@@ -6,7 +6,6 @@
 //  Copyright © 2019 youngjun goo. All rights reserved.
 //
 
-import Foundation
 import NMapsMap
 import RxSwift
 import RxCocoa
@@ -14,7 +13,7 @@ import RxOptional
 
 protocol NMViewBindable {
     // input
-    // var longPressedMap: ControlEvent<Void> { get }
+    // var longPressedMap: PublishRelay<Void> { get }
     // output
     // var pressMapData: Signal<NMGLatLng> { get }
     var locationData: Signal<NMGLatLng> { get }
@@ -22,7 +21,7 @@ protocol NMViewBindable {
 
 class NMViewModel: NMViewBindable {
     // input
-    // let longPressedMap: ControlEvent<Void>
+    // let longPressedMap = PublishRelay<Void>()
     // output
     // let pressMapData: Signal<NMGLatLng>
     let locationData: Signal<NMGLatLng>
@@ -46,6 +45,11 @@ class NMViewModel: NMViewBindable {
             .map(model.parseData)
             .filterNil()
             .asSignal(onErrorSignalWith: .empty())
+        
+//        let pressRsult = longPressedMap
+//            .asObservable()
+//            .share()
+        
     }
     
 }

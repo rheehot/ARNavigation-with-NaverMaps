@@ -28,22 +28,31 @@
 		EF8930B123BD7D3C00BD4B5A /* MVVM+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8930B023BD7D3C00BD4B5A /* MVVM+ViewController.swift */; };
 		EF8930B323BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8930B223BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift */; };
 		EF89329823B44D3500CFBCDA /* NMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329723B44D3500CFBCDA /* NMModel.swift */; };
-		EF89329B23B4524E00CFBCDA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329A23B4524E00CFBCDA /* Search.swift */; };
+		EF89329B23B4524E00CFBCDA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89329A23B4524E00CFBCDA /* Place.swift */; };
 		EF8B025C23B5C2D600E630DC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B025B23B5C2D600E630DC /* ViewModelType.swift */; };
 		EF8E1FB423BECE9E009071FA /* RxCoreLocationDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E1FB323BECE9E009071FA /* RxCoreLocationDelegateProxy.swift */; };
 		EF929C6C23C81CA800FCE571 /* RxNMFLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF929C6B23C81CA800FCE571 /* RxNMFLocationManagerDelegateProxy.swift */; };
-		EF9492C223B1AB920017A640 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C123B1AB920017A640 /* SearchViewController.swift */; };
-		EF9492C423B1AD810017A640 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C323B1AD810017A640 /* SearchViewModel.swift */; };
+		EF9492C223B1AB920017A640 /* SearchPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C123B1AB920017A640 /* SearchPlaceViewController.swift */; };
+		EF9492C423B1AD810017A640 /* SearchPlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C323B1AD810017A640 /* SearchPlaceModel.swift */; };
 		EF9492CA23B1B6690017A640 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492C923B1B6690017A640 /* HTTPMethod.swift */; };
 		EF9492D523B1D7020017A640 /* NavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492D423B1D7020017A640 /* NavigationType.swift */; };
 		EF9492D723B1F4110017A640 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492D623B1F4110017A640 /* APIService.swift */; };
 		EF9492D923B2047C0017A640 /* NMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492D823B2047C0017A640 /* NMViewModel.swift */; };
 		EF9492DB23B206230017A640 /* NMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9492DA23B206230017A640 /* NMViewController.swift */; };
-		EFB0FDE9237EA595005EEDE2 /* Driving.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDE8237EA595005EEDE2 /* Driving.swift */; };
+		EF9943E92415FC2F0046C0CA /* SearchPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9943E72415FC2F0046C0CA /* SearchPlaceTableViewCell.swift */; };
+		EF9943EA2415FC2F0046C0CA /* SearchPlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9943E82415FC2F0046C0CA /* SearchPlaceTableViewCell.xib */; };
+		EF99894D2411FE9E0095CFCC /* SearchPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99894C2411FE9E0095CFCC /* SearchPlaceViewModel.swift */; };
+		EF99895124124C740095CFCC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99895024124C740095CFCC /* ActivityIndicator.swift */; };
+		EF9B77FF2410AE0D0055C576 /* NaverMap+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B77FE2410AE0D0055C576 /* NaverMap+ViewController.swift */; };
+		EFA4839D241689830066D9AF /* TableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4839C241689830066D9AF /* TableViewType.swift */; };
+		EFA4839F241694D30066D9AF /* Reactive+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4839E241694D30066D9AF /* Reactive+Extension.swift */; };
+		EFA483A1241723410066D9AF /* DirectionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA483A0241723410066D9AF /* DirectionInput.swift */; };
+		EFA483A3241729840066D9AF /* PlaceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA483A2241729840066D9AF /* PlaceInput.swift */; };
+		EFB0FDE9237EA595005EEDE2 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDE8237EA595005EEDE2 /* Directions.swift */; };
 		EFB0FDF2237EA6B7005EEDE2 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */; };
 		EFB0FDF4237EA7F2005EEDE2 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0FDF3237EA7F2005EEDE2 /* NetworkError.swift */; };
 		EFB2748423C596B600AFD6AD /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2748323C596B600AFD6AD /* NotificationName+Extension.swift */; };
-		EFB87A24239D2C96007458E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87A23239D2C96007458E3 /* Constants.swift */; };
+		EFB87A24239D2C96007458E3 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87A23239D2C96007458E3 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +96,7 @@
 		EF072662237C12AF00384D3E /* ARNavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARNavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF072666237C12AF00384D3E /* ARNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNavigationUITests.swift; sourceTree = "<group>"; };
 		EF072668237C12AF00384D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF072674237C162B00384D3E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = ARNavigation/App/Controller/ARViewController.swift; sourceTree = SOURCE_ROOT; };
+		EF072674237C162B00384D3E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = ARNavigation/App/Presentation/ARView/ARViewController.swift; sourceTree = SOURCE_ROOT; };
 		EF40023A2383C2E300A8DF0C /* CoreLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreLocation+Extension.swift"; path = "ARNavigation/App/Extension/CoreLocation+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		EF4367E423C2D40F000EA528 /* GPSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSError.swift; sourceTree = "<group>"; };
 		EF4367EC23C424EF000EA528 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -99,22 +108,31 @@
 		EF8930B023BD7D3C00BD4B5A /* MVVM+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVVM+ViewController.swift"; sourceTree = "<group>"; };
 		EF8930B223BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNaverMapsDelegateProxy.swift; sourceTree = "<group>"; };
 		EF89329723B44D3500CFBCDA /* NMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMModel.swift; sourceTree = "<group>"; };
-		EF89329A23B4524E00CFBCDA /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		EF89329A23B4524E00CFBCDA /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		EF8B025B23B5C2D600E630DC /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EF8E1FB323BECE9E009071FA /* RxCoreLocationDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCoreLocationDelegateProxy.swift; sourceTree = "<group>"; };
 		EF929C6B23C81CA800FCE571 /* RxNMFLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNMFLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
-		EF9492C123B1AB920017A640 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		EF9492C323B1AD810017A640 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		EF9492C123B1AB920017A640 /* SearchPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewController.swift; sourceTree = "<group>"; };
+		EF9492C323B1AD810017A640 /* SearchPlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceModel.swift; sourceTree = "<group>"; };
 		EF9492C923B1B6690017A640 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EF9492D423B1D7020017A640 /* NavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationType.swift; sourceTree = "<group>"; };
 		EF9492D623B1F4110017A640 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		EF9492D823B2047C0017A640 /* NMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMViewModel.swift; sourceTree = "<group>"; };
 		EF9492DA23B206230017A640 /* NMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMViewController.swift; sourceTree = "<group>"; };
-		EFB0FDE8237EA595005EEDE2 /* Driving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Driving.swift; path = ARNavigation/App/Model/Navigation/Driving.swift; sourceTree = SOURCE_ROOT; };
+		EF9943E72415FC2F0046C0CA /* SearchPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceTableViewCell.swift; sourceTree = "<group>"; };
+		EF9943E82415FC2F0046C0CA /* SearchPlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchPlaceTableViewCell.xib; sourceTree = "<group>"; };
+		EF99894C2411FE9E0095CFCC /* SearchPlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewModel.swift; sourceTree = "<group>"; };
+		EF99895024124C740095CFCC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		EF9B77FE2410AE0D0055C576 /* NaverMap+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaverMap+ViewController.swift"; sourceTree = "<group>"; };
+		EFA4839C241689830066D9AF /* TableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewType.swift; sourceTree = "<group>"; };
+		EFA4839E241694D30066D9AF /* Reactive+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extension.swift"; sourceTree = "<group>"; };
+		EFA483A0241723410066D9AF /* DirectionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionInput.swift; sourceTree = "<group>"; };
+		EFA483A2241729840066D9AF /* PlaceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInput.swift; sourceTree = "<group>"; };
+		EFB0FDE8237EA595005EEDE2 /* Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Directions.swift; path = ARNavigation/App/Model/Navigation/Directions.swift; sourceTree = SOURCE_ROOT; };
 		EFB0FDF1237EA6B7005EEDE2 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationData.swift; path = ARNavigation/App/Model/Location/LocationData.swift; sourceTree = SOURCE_ROOT; };
 		EFB0FDF3237EA7F2005EEDE2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkError.swift; path = ARNavigation/App/Networking/NetworkError.swift; sourceTree = SOURCE_ROOT; };
 		EFB2748323C596B600AFD6AD /* NotificationName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
-		EFB87A23239D2C96007458E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EFB87A23239D2C96007458E3 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				EF072652237C12AF00384D3E /* Info.plist */,
+				EF9F1C4B240F4D16005121D1 /* StoryBoard */,
 				EF8B025823B5A69100E630DC /* Resources */,
 				EF8B025A23B5A6B600E630DC /* App */,
 			);
@@ -205,29 +224,12 @@
 			path = ARNavigationUITests;
 			sourceTree = "<group>";
 		};
-		EF072676237C163100384D3E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EF072674237C162B00384D3E /* ARViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		EF4367E623C327CE000EA528 /* MainView */ = {
-			isa = PBXGroup;
-			children = (
-				EF9492DA23B206230017A640 /* NMViewController.swift */,
-				EF9492D823B2047C0017A640 /* NMViewModel.swift */,
-				EF89329723B44D3500CFBCDA /* NMModel.swift */,
-			);
-			path = MainView;
-			sourceTree = "<group>";
-		};
 		EF8499D1239627CD00A0F7B2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EF9F1C4C240F4D4B005121D1 /* ARView */,
 				EF89329623B44CDE00CFBCDA /* NMView */,
-				EFDB695423AA624E00F5BD90 /* Search */,
+				EFDB695423AA624E00F5BD90 /* SearchView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -235,7 +237,9 @@
 		EF89329623B44CDE00CFBCDA /* NMView */ = {
 			isa = PBXGroup;
 			children = (
-				EF4367E623C327CE000EA528 /* MainView */,
+				EF9492DA23B206230017A640 /* NMViewController.swift */,
+				EF9492D823B2047C0017A640 /* NMViewModel.swift */,
+				EF89329723B44D3500CFBCDA /* NMModel.swift */,
 			);
 			path = NMView;
 			sourceTree = "<group>";
@@ -243,7 +247,8 @@
 		EF89329923B4523600CFBCDA /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				EF89329A23B4524E00CFBCDA /* Search.swift */,
+				EF89329A23B4524E00CFBCDA /* Place.swift */,
+				EFA483A2241729840066D9AF /* PlaceInput.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -261,9 +266,7 @@
 		EF8B025823B5A69100E630DC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EF07264A237C12AC00384D3E /* Main.storyboard */,
 				EF07264D237C12AF00384D3E /* Assets.xcassets */,
-				EF07264F237C12AF00384D3E /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -276,7 +279,6 @@
 				EF8AF7CA239938B000DEA81F /* Networking */,
 				EF8499D1239627CD00A0F7B2 /* Presentation */,
 				EFB0FDE7237EA572005EEDE2 /* Model */,
-				EF072676237C163100384D3E /* Controller */,
 				EFB0FDFC2382CBCB005EEDE2 /* Extension */,
 			);
 			path = App;
@@ -295,13 +297,49 @@
 		EF9492D323B1D6D90017A640 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EFAE219F2410926700437D94 /* ArchitectureType */,
+				EFAE219E2410924700437D94 /* Constants */,
 				EF929C6A23C81C8100FCE571 /* DelegateProxy */,
-				EFB87A23239D2C96007458E3 /* Constants.swift */,
-				EF9492D423B1D7020017A640 /* NavigationType.swift */,
-				EF8B025B23B5C2D600E630DC /* ViewModelType.swift */,
-				EF8930B023BD7D3C00BD4B5A /* MVVM+ViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		EF9F1C4B240F4D16005121D1 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				EF07264A237C12AC00384D3E /* Main.storyboard */,
+				EF07264F237C12AF00384D3E /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		EF9F1C4C240F4D4B005121D1 /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+				EF072674237C162B00384D3E /* ARViewController.swift */,
+			);
+			path = ARView;
+			sourceTree = "<group>";
+		};
+		EFAE219E2410924700437D94 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EF9492D423B1D7020017A640 /* NavigationType.swift */,
+				EFB87A23239D2C96007458E3 /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EFAE219F2410926700437D94 /* ArchitectureType */ = {
+			isa = PBXGroup;
+			children = (
+				EF8930B023BD7D3C00BD4B5A /* MVVM+ViewController.swift */,
+				EFA4839C241689830066D9AF /* TableViewType.swift */,
+				EF8B025B23B5C2D600E630DC /* ViewModelType.swift */,
+				EF9B77FE2410AE0D0055C576 /* NaverMap+ViewController.swift */,
+				EF99895024124C740095CFCC /* ActivityIndicator.swift */,
+			);
+			path = ArchitectureType;
 			sourceTree = "<group>";
 		};
 		EFB0FDE7237EA572005EEDE2 /* Model */ = {
@@ -317,7 +355,8 @@
 		EFB0FDEA237EA64B005EEDE2 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				EFB0FDE8237EA595005EEDE2 /* Driving.swift */,
+				EFB0FDE8237EA595005EEDE2 /* Directions.swift */,
+				EFA483A0241723410066D9AF /* DirectionInput.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -342,17 +381,21 @@
 				EF4367EC23C424EF000EA528 /* UIView+Extension.swift */,
 				EF4367EE23C426DD000EA528 /* NSObject+Extension.swift */,
 				EFB2748323C596B600AFD6AD /* NotificationName+Extension.swift */,
+				EFA4839E241694D30066D9AF /* Reactive+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		EFDB695423AA624E00F5BD90 /* Search */ = {
+		EFDB695423AA624E00F5BD90 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
-				EF9492C123B1AB920017A640 /* SearchViewController.swift */,
-				EF9492C323B1AD810017A640 /* SearchViewModel.swift */,
+				EF9492C123B1AB920017A640 /* SearchPlaceViewController.swift */,
+				EF99894C2411FE9E0095CFCC /* SearchPlaceViewModel.swift */,
+				EF9492C323B1AD810017A640 /* SearchPlaceModel.swift */,
+				EF9943E72415FC2F0046C0CA /* SearchPlaceTableViewCell.swift */,
+				EF9943E82415FC2F0046C0CA /* SearchPlaceTableViewCell.xib */,
 			);
-			path = Search;
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 		FBA413F63AC7618BAA75CE6C /* Pods */ = {
@@ -480,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF072651237C12AF00384D3E /* LaunchScreen.storyboard in Resources */,
+				EF9943EA2415FC2F0046C0CA /* SearchPlaceTableViewCell.xib in Resources */,
 				EF07264E237C12AF00384D3E /* Assets.xcassets in Resources */,
 				EF07264C237C12AC00384D3E /* Main.storyboard in Resources */,
 			);
@@ -610,33 +654,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8499BD238D519A00A0F7B2 /* NMGLatLng+Extension.swift in Sources */,
+				EFA483A1241723410066D9AF /* DirectionInput.swift in Sources */,
 				EF8E1FB423BECE9E009071FA /* RxCoreLocationDelegateProxy.swift in Sources */,
 				EF9492D723B1F4110017A640 /* APIService.swift in Sources */,
-				EFB87A24239D2C96007458E3 /* Constants.swift in Sources */,
+				EFB87A24239D2C96007458E3 /* APIConstants.swift in Sources */,
 				EF40023B2383C2E300A8DF0C /* CoreLocation+Extension.swift in Sources */,
 				EF89329823B44D3500CFBCDA /* NMModel.swift in Sources */,
 				EF4367EF23C426DD000EA528 /* NSObject+Extension.swift in Sources */,
 				EF929C6C23C81CA800FCE571 /* RxNMFLocationManagerDelegateProxy.swift in Sources */,
+				EFA4839F241694D30066D9AF /* Reactive+Extension.swift in Sources */,
 				EFB0FDF4237EA7F2005EEDE2 /* NetworkError.swift in Sources */,
 				EF9492D523B1D7020017A640 /* NavigationType.swift in Sources */,
 				EF9492D923B2047C0017A640 /* NMViewModel.swift in Sources */,
+				EFA483A3241729840066D9AF /* PlaceInput.swift in Sources */,
 				EF8930B123BD7D3C00BD4B5A /* MVVM+ViewController.swift in Sources */,
 				EF8B025C23B5C2D600E630DC /* ViewModelType.swift in Sources */,
 				EF072675237C162B00384D3E /* ARViewController.swift in Sources */,
+				EF99895124124C740095CFCC /* ActivityIndicator.swift in Sources */,
 				EF889A2323C56AB10009CCC8 /* LocationManager.swift in Sources */,
-				EF9492C423B1AD810017A640 /* SearchViewModel.swift in Sources */,
+				EF9492C423B1AD810017A640 /* SearchPlaceModel.swift in Sources */,
 				EF9492DB23B206230017A640 /* NMViewController.swift in Sources */,
+				EF99894D2411FE9E0095CFCC /* SearchPlaceViewModel.swift in Sources */,
+				EFA4839D241689830066D9AF /* TableViewType.swift in Sources */,
 				EFB2748423C596B600AFD6AD /* NotificationName+Extension.swift in Sources */,
 				EF692C5D23BCD346003C29C6 /* ObservableType+Extension.swift in Sources */,
 				EF8930B323BD8FFF00BD4B5A /* RxNaverMapsDelegateProxy.swift in Sources */,
-				EF9492C223B1AB920017A640 /* SearchViewController.swift in Sources */,
+				EF9B77FF2410AE0D0055C576 /* NaverMap+ViewController.swift in Sources */,
+				EF9492C223B1AB920017A640 /* SearchPlaceViewController.swift in Sources */,
 				EF4367E523C2D40F000EA528 /* GPSError.swift in Sources */,
-				EF89329B23B4524E00CFBCDA /* Search.swift in Sources */,
+				EF89329B23B4524E00CFBCDA /* Place.swift in Sources */,
 				EFB0FDF2237EA6B7005EEDE2 /* LocationData.swift in Sources */,
 				EF9492CA23B1B6690017A640 /* HTTPMethod.swift in Sources */,
 				EF072645237C12AC00384D3E /* AppDelegate.swift in Sources */,
 				EF4367ED23C424EF000EA528 /* UIView+Extension.swift in Sources */,
-				EFB0FDE9237EA595005EEDE2 /* Driving.swift in Sources */,
+				EF9943E92415FC2F0046C0CA /* SearchPlaceTableViewCell.swift in Sources */,
+				EFB0FDE9237EA595005EEDE2 /* Directions.swift in Sources */,
 				EF889A2123C569A90009CCC8 /* LocationManagerImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

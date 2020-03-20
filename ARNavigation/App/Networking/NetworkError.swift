@@ -15,7 +15,7 @@ enum NetworkError: Error {
 }
 
 extension NetworkError: LocalizedError {
-    var error: String? {
+    var message: String? {
         switch self {
         case .networkConnection:
             return NSLocalizedString("네트워크 연결을 확인해주세요.", comment: "RequestError")

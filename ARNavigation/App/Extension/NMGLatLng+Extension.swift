@@ -10,13 +10,7 @@ import Foundation
 import NMapsMap
 
 extension NMGLatLng {
-    var convertString: String {
-        "\(self.lng),\(self.lat)"
-    }
-    
-    var convertedLatLng: NMGLatLng {
-         self.lat = floor((self.lat) * 1000000) / 1000000
-         self.lng = floor((self.lng) * 1000000) / 1000000
-         return self
-     }
+    var convertString: String { "\(self.lng),\(self.lat)" }
+
+    var convertLatLng: Latlng { return Latlng(lat: self.lat, lng: self.lng) }
 }
