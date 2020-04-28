@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,14 +76,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jd-VJ-Tdx">
-                                        <rect key="frame" x="368" y="60" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="검색"/>
-                                        <connections>
-                                            <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lun-Wi-YSQ"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -126,10 +118,8 @@
                         <outlet property="lngLabel" destination="AkR-2S-7NS" id="88V-kt-Jcg"/>
                         <outlet property="naverMapView" destination="CtG-ul-vD2" id="Q6Q-fF-uc5"/>
                         <outlet property="navigationButton" destination="AU2-eO-FYw" id="xeX-YJ-col"/>
-                        <outlet property="searchButton" destination="5Jd-VJ-Tdx" id="ew0-d9-zGP"/>
                         <outlet property="symbolInfoView" destination="f1H-UQ-ocE" id="Jnu-gk-a1Z"/>
                         <outlet property="symbolLabel" destination="wm4-Aw-mOu" id="YmT-WU-Ef2"/>
-                        <segue destination="Ohu-JE-n5W" kind="show" identifier="showSearchPlace" id="UsY-i8-I8Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -164,43 +154,27 @@
                     </view>
                     <navigationItem key="navigationItem" id="1XV-OP-h8Z"/>
                     <connections>
-                        <outlet property="sceneView" destination="rwC-kn-ukd" id="1pT-r2-b2E"/>
+                        <outlet property="arSceneView" destination="rwC-kn-ukd" id="frs-Ee-7js"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbD-lc-3FK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953" y="-190"/>
         </scene>
-        <!--Search Place View Controller-->
+        <!--View Controller-->
         <scene sceneID="cSV-dh-gVu">
             <objects>
-                <viewController id="Ohu-JE-n5W" customClass="SearchPlaceViewController" customModule="ARNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ohu-JE-n5W" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xHT-bp-Wdy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7cz-Gq-Xho">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="MNa-IW-Dbc" firstAttribute="trailing" secondItem="7cz-Gq-Xho" secondAttribute="trailing" id="7sH-oa-4RL"/>
-                            <constraint firstItem="MNa-IW-Dbc" firstAttribute="bottom" secondItem="7cz-Gq-Xho" secondAttribute="bottom" id="Ph5-Eq-v0v"/>
-                            <constraint firstItem="7cz-Gq-Xho" firstAttribute="leading" secondItem="MNa-IW-Dbc" secondAttribute="leading" id="QWH-OZ-TZ1"/>
-                            <constraint firstItem="7cz-Gq-Xho" firstAttribute="top" secondItem="MNa-IW-Dbc" secondAttribute="top" id="mr8-gK-JYt"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MNa-IW-Dbc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7CK-ga-BR8"/>
-                    <connections>
-                        <outlet property="tableView" destination="7cz-Gq-Xho" id="xhD-u6-gH0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v87-oy-htH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952.17391304347836" y="509.59821428571428"/>
+            <point key="canvasLocation" x="953" y="510"/>
         </scene>
     </scenes>
 </document>

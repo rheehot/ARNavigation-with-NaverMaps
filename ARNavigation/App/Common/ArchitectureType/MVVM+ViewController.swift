@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 
-
 class ViewController<ViewBindable>: UIViewController {
     var disposeBag = DisposeBag()
     
