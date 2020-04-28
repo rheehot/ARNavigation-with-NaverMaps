@@ -39,7 +39,6 @@ class APIServiceImpl: APIService {
         }
     }
     // Search API 요청
-    // TODO: Result Type으로 변경해야함
     func searchPlaces(input: PlaceInput) -> Observable<Result<[PlaceInfo], NetworkError>> {
         guard let url = createSearchComponents(input: input).url else {
             let error = NetworkError.requestFailed
