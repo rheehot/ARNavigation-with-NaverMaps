@@ -7,6 +7,8 @@ Naver Maps를 활용한 ARNavigation
 - Naver SDK iOS 연동
 - Naver Direction API를 활용하여 일반 길찾기 기능 구현
 - ARKit을 활용하 다양한 기능 추가
+- RxSwift - MVVM 을 적용
+- Naver Maps API 활용
 
 
 ## 아이디어
